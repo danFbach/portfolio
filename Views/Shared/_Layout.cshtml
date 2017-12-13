@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - GODMODE</title>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/site.css" />
+    <environment names="Development">
+        <script src="~/js/jQuery-v3.2.1.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        <noscript>
+            <style type="text/css" media="screen">
+                .row{
+                        opacity:100 !important;
+                    }
+            </style>
+        </noscript>
+    </environment>
+    <environment names="Staging,Production">
+        <script src="~/js/jQuery-v3.2.1.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+</head>
+<body id="@ViewData["Page Name"]">
+    <nav class="preload">
+        <div class="navbar">
+            <div class="title">@ViewData["Title"]</div>
+            <div class="topLogo"><img src="~/images/_logoBar.png"/></div>
+            <div class="navStack">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="navbar-ul">
+                <li><a href="/Home/Index">Home<span class="nav-bar"></span></a></li>
+                <li><a href="/Home/About">About<span class="nav-bar"></span></a></li>
+                <li><a href="#" id="contactTrigger">Projects<span class="nav-bar"></span></a>
+                    <ul class="sub-navbar-ul">
+                        <li><a href="/Projects/battery">BatteryProducts<span class="_nav-bar"></span></a></li>
+                        <li><a href="/Projects/RoughRhino">Rough Rhino<span class="_nav-bar"></span></a></li>
+                        <li><a href="/Projects/NSI">NSI<span class="_nav-bar"></span></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; 2017 - test</p>
+        </footer>
+    </div
+    
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
