@@ -39,6 +39,8 @@ $(document).ready(function($) {
 			 slideTo(this);
 		}
 	})
+
+	// TO FIX CURRENT VIEW TO TOP OF PAGE ON SCROLL
 	// $('.navStack').click(function(){
 	// 	$('body').removeClass('preload');
 	// 	$('.navBurger span').toggleClass('active');
