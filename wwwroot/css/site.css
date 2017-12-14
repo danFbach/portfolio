@@ -1,327 +1,356 @@
 ﻿/***********************************HIDDEN ELEMENTS***********************************/
 
-    .title, .navStack{
-        display: none;
-    }
+.title,
+.navStack {
+    display: none;
+}
+
 
 /***********************************STANDARD ELEMENTS FOR ALL PAGES***********************************/
 
-    a:active, a:focus{
-        border:none;
-        outline: none;
-    }
+a:active,
+a:focus {
+    border: none;
+    outline: none;
+}
 
-    body {
-        padding-top: 0;
-        padding-bottom: 20px;
-        background-color: #333;
-        margin: 0;
-        color: #FFF;
-    }
-    
-    .body-content {
-        font-family: 'Ubuntu', sans-serif;
-        display: block;
-        margin: 0 auto;
-        background: #222;
-        float: none;
-        top: 70px;
-        position: relative;
-    }
+body {
+    padding-top: 0;
+    padding-bottom: 20px;
+    background-color: #333;
+    margin: 0;
+    color: #FFF;
+}
 
-    .body-content hr {
-        width: 100%;
-        display: inline-block;
-        margin: 0;
-    }
+.body-content {
+    font-family: 'Ubuntu', sans-serif;
+    display: block;
+    margin: 0 auto;
+    background: #222;
+    float: none;
+    top: 70px;
+    position: relative;
+}
 
-    .row{
-        margin: 25px 1.5%;
-        background-color: #1a1a1a;
-        width:97%;
-        box-shadow: 0px 0px 9px 3px #1a1a1a;
-        border-radius: 5px;
-        opacity: 0;
-        transition: 0.5s opacity;
-        display: inline-block;
-    }
-    .row.active{
-        opacity: 100;
-        transition: 0.5s opacity;
-    }
+.body-content hr {
+    width: 100%;
+    display: inline-block;
+    margin: 0;
+}
 
-    #BatteryProducts .row{
-        opacity: 100;
-        padding-bottom: 10px;
-    }
+.row {
+    margin: 25px 1.5%;
+    background-color: #1a1a1a;
+    width: 97%;
+    box-shadow: 0px 0px 9px 3px #1a1a1a;
+    border-radius: 5px;
+    opacity: 0;
+    transition: 0.5s opacity;
+    display: inline-block;
+}
 
-    .col{
-        display: inline-block;
-        width: 39%;
-        margin: 10px 3%;
-        padding: 0 2%;
-        background: #212121;
-    }
+.row.active {
+    opacity: 100;
+    transition: 0.5s opacity;
+}
 
-    .fullCol{
-        width: 95%;
-        margin: 0 2.5% 0 2.5%;
-        position: relative;
-        opacity: 0;
-        transition: 1s top, 2s opacity;
-    }
-    .fullCol.active{
-        top: 0;
-        opacity: 100;
-        transition: 1s top, 2s opacity;
-    }
-    .fullCol.visible{        
-        margin-top: 0;
-        opacity: 100;
-    }
-    .projectPack.active .fullCol {
-        /*top: 0;*/
-        opacity: 100;
-        transition: 1s top, 2s opacity;
-    }
-    .projectPack.visible .fullCol{        
-        /*margin-top: 0;*/
-        opacity: 100;
-    }
-    .datapack{
-        margin: 10px 0;
-        display: inline-block;
-    }
+.row:first-of-type {
+    opacity: 100;
+    transition: none;
+}
 
-    footer {
-        font-family: 'Ubuntu', sans-serif;
-        display: inline-block;
-    }
+#BatteryProducts .row {
+    opacity: 100;
+    padding-bottom: 10px;
+}
 
-    .topLogo,
-    .topLogo img{
-        max-width: 150px;
-        height: auto;
-        max-height: 40px;
-        display: inline-block;
-    }
+.col {
+    display: inline-block;
+    width: 39%;
+    margin: 10px 3%;
+    padding: 0 2%;
+    background: #212121;
+}
 
-    nav {    
-        font-family: 'Ubuntu', sans-serif;
-        top: 0;
-        position: fixed;
-        width: 100%;
-        z-index: 1;
-        box-shadow: 0 15px 10px 0px #222;
-        height: 35px;
-    }
+.fullCol {
+    width: 95%;
+    margin: 0 2.5% 0 2.5%;
+    position: relative;
+    opacity: 0;
+    transition: 1s top, 2s opacity;
+}
 
-    .navbar,
-    .navbar-ul {
-        background: #222;
-        width: 100%;
-        position: relative;
-        display: block;
-        height: 40px;
-        margin: 0 auto;
-    }
+.fullCol.active {
+    top: 0;
+    opacity: 100;
+    transition: 1s top, 2s opacity;
+}
 
-    .navbar ul.navbar-ul li {
-        list-style: none;
-        position: relative;
-        width: auto;
-        height: 40px;
-        float: left;
-        display: block;
-        padding-top: 10px;
-    }
+.fullCol.visible {
+    margin-top: 0;
+    opacity: 100;
+}
 
-    .navbar-ul {
-        display: inline-block;
-        border-bottom: 3px #222 solid;
-        width: calc(100% - 180px);
-        padding:0 0 0 25px;
-    }
+.projectPack.active .fullCol {
+    /*top: 0;*/
+    opacity: 100;
+    transition: 1s top, 2s opacity;
+}
 
-    .navbar .navbar-ul .sub-navbar-ul {
-        display: inline-block;
-        position: absolute;
-        background-color: #222;
-        box-shadow: 0px 0px 9px 3px #1a1a1a;
-        border-bottom: 3px #6b7cc2 solid;
-        top: -15px;
-        z-index: -1;
-        transition: 0.2s top;
-        padding: 0px 20px;
-    }
+.projectPack.visible .fullCol {
+    /*margin-top: 0;*/
+    opacity: 100;
+}
 
-    .navbar-ul li:hover .sub-navbar-ul{
-        transition: 0.2s 0.3s top;
-        top: 30px;
-    }
+.datapack {
+    margin: 10px 0;
+    display: inline-block;
+}
 
-    .navbar .navbar-ul li .sub-navbar-ul li{
-        height: 0px;
-        transition: 0.2s height;
-        width: 100%;
-        text-align: left;
-    }
+footer {
+    font-family: 'Ubuntu', sans-serif;
+    display: inline-block;
+}
 
-    .navbar .navbar-ul li:hover .sub-navbar-ul li{
-        height: 30px;
-        transition: 0.4s 0.3s height;
-    }
+.topLogo,
+.topLogo img {
+    max-width: 150px;
+    height: auto;
+    max-height: 40px;
+    display: inline-block;
+}
 
-    .navbar ul.navbar-ul .sub-navbar-ul li a{
-        width: 100%;
-        padding: 0;
-        white-space: nowrap;
-        line-height: 20px;
-    }
+nav {
+    font-family: 'Ubuntu', sans-serif;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    box-shadow: 0 15px 10px 0px #222;
+    height: 35px;
+}
 
-    .navbar ul.navbar-ul .sub-navbar-ul li a ._nav-bar{
-        height: 1px;
-        width: 0px;
-        background-color: #AAFFEE;
-        transition: 0.3s width;
-        bottom:0px;
-        display: block;
-        border-radius: 5px;
-    }
+.navbar,
+.navbar-ul {
+    background: #222;
+    width: 100%;
+    position: relative;
+    display: block;
+    height: 40px;
+    margin: 0 auto;
+}
 
-    .navbar ul.navbar-ul .sub-navbar-ul li:hover a ._nav-bar{
-        width: 100%;
-        transition: 0.3s width;
-    }
+.navbar ul.navbar-ul li {
+    list-style: none;
+    position: relative;
+    width: auto;
+    height: 40px;
+    float: left;
+    display: block;
+    padding-top: 10px;
+}
 
-    .nav-bar {
-        position: absolute;
-        display: block;
-        width: 100%;
-        height: 3px;
-        top: -3px;
-        background-color: #6b7cc2;
-        left: 0px;
-        transition: 0.3s 0.2s top;
-        border-radius: 5px;
-    }
+.navbar-ul {
+    display: inline-block;
+    border-bottom: 3px #222 solid;
+    width: calc(100% - 180px);
+    padding: 0 0 0 25px;
+}
 
-    .navbar li:hover a .nav-bar {
-        top: 40px;
-        transition: 0.3s top;
-    }
+.navbar .navbar-ul .sub-navbar-ul {
+    display: inline-block;
+    position: absolute;
+    background-color: #222;
+    box-shadow: 0px 0px 9px 3px #1a1a1a;
+    border-bottom: 3px #6b7cc2 solid;
+    top: -30px;
+    z-index: -1;
+    transition: 0.2s top;
+    padding: 0px 20px;
+}
+
+.navbar-ul li:hover .sub-navbar-ul {
+    transition: 0.2s 0.3s top;
+    top: 30px;
+}
+
+.navbar .navbar-ul li .sub-navbar-ul li {
+    height: 0px;
+    transition: 0.2s height;
+    width: 100%;
+    text-align: left;
+}
+
+.navbar .navbar-ul li:hover .sub-navbar-ul li {
+    height: 30px;
+    transition: 0.4s 0.3s height;
+}
+
+.navbar ul.navbar-ul .sub-navbar-ul li a {
+    width: 100%;
+    padding: 0;
+    white-space: nowrap;
+    line-height: 20px;
+}
+
+.navbar ul.navbar-ul .sub-navbar-ul li a ._nav-bar {
+    height: 1px;
+    width: 0px;
+    background-color: #AAFFEE;
+    transition: 0.3s width;
+    bottom: 0px;
+    display: block;
+    border-radius: 5px;
+}
+
+.navbar ul.navbar-ul .sub-navbar-ul li:hover a ._nav-bar {
+    width: 100%;
+    transition: 0.3s width;
+}
+
+.nav-bar {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 3px;
+    top: -3px;
+    background-color: #6b7cc2;
+    left: 0px;
+    transition: 0.3s 0.2s top;
+    border-radius: 5px;
+}
+
+.navbar li:hover a .nav-bar {
+    top: 40px;
+    transition: 0.3s top;
+}
+
+.navbar li a.curPage .nav-bar {
+    top: 40px;
+    background-color: #9AF;
+    transition: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    display: block;
+    color: #6b7cc2;
+    letter-spacing: 2px;
+    /*text-transform: uppercase;*/
+}
+
+h2 {
+    /*text-decoration: whitesmoke underline wavy;*/
+    color: whitesmoke;
+    padding-bottom: 3px;
+    margin: 5px 0px 0px 0px;
+    display: inline-block;
+    /*line-height: 20px;*/
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+h2.subh2 {
+    font-size: 22px;
+    color: #66CDAA;
+    width: 100%;
+}
+
+h2.subh2.active {}
+
+h2.subh2.hl,
+h2.subh2:hover {
+    color: #AAFFEE;
+    cursor: pointer;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+.hb,
+.hb2 {
+    display: block;
+    height: 1px;
+    background-color: #FFF;
+    width: 0;
+    transition: all 0.3s;
+    right: 50%;
+    position: absolute;
+}
+
+.hb2 {
+    left: 50%;
+    transform: rotate(180deg);
+}
+
+h2.subh2.hl .hb,
+h2.subh2.hl .hb2,
+h2.subh2:hover .hb,
+h2.subh2:hover .hb2 {
+    height: 1px;
+    width: 50%;
+    transition: all 0.3s;
+}
+
+h2.subh2.hl .hb,
+h2.subh2.hl .hb2 {
+    transition: all 0.3s;
+    background-color: #66CDAA;
+}
+
+body ul {
+    display: block;
+}
+
+.fullCol {
+    display: inline-block;
+}
+
+ul {
+    margin: 10px 0 10px;
+}
 
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        display: block;
-        color: #6b7cc2;
-        letter-spacing: 2px;
-        /*text-transform: uppercase;*/
-    }
-
-    h2{
-        /*text-decoration: whitesmoke underline wavy;*/
-        color: whitesmoke;  
-        padding-bottom: 3px;
-        margin: 5px 0px 0px 0px;
-        display: inline-block;
-        /*line-height: 20px;*/
-        font-size: 30px;
-        width: 100%;
-        text-align: center;
-    }
-
-    h2.subh2{
-        font-size: 22px;
-        color: #66CDAA;
-        width: 100%;
-    }
-    h2.subh2.active{
-
-    }
-    h2.subh2.hl,
-    h2.subh2:hover{
-        color: #AAFFEE;
-        cursor: pointer;
-    }
-
-    h3{
-        font-size: 16px;
-    }
-
-    .hb,
-    .hb2{
-        display: block;
-        height: 1px;
-        background-color: #FFF;
-        width: 0;
-        transition: all 0.3s;
-        right: 50%;
-        position: absolute;
-    }
-
-    .hb2{
-        left: 50%;
-        transform: rotate(180deg);
-    }
-
-    h2.subh2.hl .hb,
-    h2.subh2.hl .hb2,
-    h2.subh2:hover .hb,
-    h2.subh2:hover .hb2{
-        height: 1px;
-        width: 50%;
-        transition: all 0.3s;
-    }
-
-    h2.subh2.hl .hb,
-    h2.subh2.hl .hb2{
-        transition: all 0.3s;
-        background-color: #66CDAA;
-    }
-
-    body ul {
-        display: block;
-    }
-
-    .fullCol{
-        display: inline-block;
-    }
-    ul{
-        margin: 10px 0 10px;
-    }
 /*    .fullCol img.screen{
 
     }*/
-    .projectPack{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-    .screencap img{
-        max-width: 100%;        
-    }
-    .desktop img{
-        width: auto;
-        height: auto;
-    }
-    .screencap.tablet{
-        max-width: 63%;
-        margin: 0 1% 0 0;
-        width: auto;
-        height: auto;
-    }
-    .screencap.mobile{
-        max-width: 35%;
-        margin: 0 0 0 1%;
-        width: auto;
-        height: auto;
-    }
+
+.projectPack {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.screencap img {
+    max-width: 100%;
+}
+
+.desktop img {
+    width: auto;
+    height: auto;
+}
+
+.screencap.tablet {
+    max-width: 63%;
+    margin: 0 1% 0 0;
+    width: auto;
+    height: auto;
+}
+
+.screencap.mobile {
+    max-width: 35%;
+    margin: 0 0 0 1%;
+    width: auto;
+    height: auto;
+}
+
+
 /*
     .screencap,
     .screencap img{
@@ -334,1006 +363,1704 @@
         transition: all 1s;
     }*/
 
-    .pageTypePack{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: auto;
-    }
-    .slider{
-        display: none;
-    }
-    .screencap{
-        max-width: 100%;
-    }
+.pageTypePack {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: auto;
+}
 
-    /*links*/
+.slider {
+    display: none;
+}
 
-    a,
-    a:active,
-    a:visited,
-    a:hover {
-        transition: 0.3s color;
-    }
+.screencap {
+    max-width: 100%;
+}
 
-    a,
-    a:active {
-        color: #66CDAA;
-        text-decoration: none;
-        border: none;
-    }
 
-    a:hover {
-        color: #AAFFEE;
-    }
+/*links*/
 
-    nav a,
-    nav a:active,
-    nav a:visited,
-    nav a:hover {
-        transition: 0.3s border, 0.3s color;
-    }
+a,
+a:active,
+a:visited,
+a:hover {
+    transition: 0.3s color;
+}
 
-    nav a,
-    nav a:active,
-    nav a:visited {
-        color: #66CDAA;
-        height: 30px;
-        display: block;
-        padding: 0 15px;
-    }
+a,
+a:active {
+    color: #66CDAA;
+    text-decoration: none;
+    border: none;
+}
 
-    nav a:focus,
-    nav a:hover {
-        color: #AAFFEE;
-    }
+a:hover {
+    color: #AAFFEE;
+}
+
+nav a,
+nav a:active,
+nav a:visited,
+nav a:hover {
+    transition: 0.3s border, 0.3s color;
+}
+
+nav a,
+nav a:active,
+nav a:visited {
+    color: #66CDAA;
+    height: 30px;
+    display: block;
+    padding: 0 15px;
+}
+
+nav a.curPage,
+nav a:focus,
+nav a:hover {
+    color: #AAFFEE;
+}
 
 
 /***********************************PRODUCTS PAGES***********************************/
 
-    #ProductsHome .col{
-        background: none;
-        display: inline-flex;
-        flex-direction: column;
-        width: 45%;
-        margin: 0 0.3%;
-    }
+#ProductsHome .col {
+    background: none;
+    display: inline-flex;
+    flex-direction: column;
+    width: 45%;
+    margin: 0 0.3%;
+}
 
-    #ProductsHome .datapack{
-        background: #222;
-    }
-    #ProductsHome .datapack img{
-        max-width: 90%;
-        height: auto;
-        margin: 10px 5% 0 5%;
-    }
-    #ProductsHome h2{
-        width: 100%;
-        text-align: center;
-    }
-    #ProductsHome ul li{
-        list-style-image: url('/images/_prpArw.png');
-    }
+#ProductsHome .datapack {
+    background: #222;
+}
+
+#ProductsHome .datapack img {
+    max-width: 90%;
+    height: auto;
+    margin: 10px 5% 0 5%;
+}
+
+#ProductsHome h2 {
+    width: 100%;
+    text-align: center;
+}
+
+#ProductsHome ul li {
+    list-style-image: url('/images/_prpArw.png');
+}
+
 
 /*========================= navStackAnimation =========================*/
 
-    /*========================= Search Glass to X - Spin =========================*/
-        .navStack0{
-            width: 35px;
-            height: 35px;
-            border: #666 solid 2px;
-            background: none;
-            position: relative;
-            margin:25px auto;
-        }
-        .navStack0 span {
-            height: 3px;
-            width: 15px;
-            top: 22px;
-            position: absolute;
-            margin: 0 3px;
-            border: 2px solid #666;
-            left: 12px;
-        }
-        .navStack0 span:nth-child(1){
-            transition:         0.4s;
-            background: #666;
-            transform:      rotate(45deg);
-            transition: all 0.4s ease-in-out;
-        }
-        .navStack0 span:nth-child(2) {
-            height: 17px;
-            width: 17px;
-            top: 2px;
-            background: #FFF;
-            border-radius: 50%;
-            transition: all 0.4s ease-in-out;
-            transform: rotate(45deg);
-            left: -1px;
-        }
-        .navStack0 span.active:nth-child(1),
-        .navStack0 span.active:nth-child(2){
-            height:2px;
-            width:25px;
-            border-radius:0;
-            top:15px;
-            left: 0px;
-            background: #666;
-            transform: rotate(315deg);
-        }
-        .navStack0 span.active:nth-child(2){
-            transform: rotate(405deg);
-        }
-        .navStack0 span:nth-child(3) {
-            display: none;
-        }
+#anIconsHome .iconPack {
+    border-bottom: solid 1px #66CDAA;
+}
 
-    /*========================= Search Glass to X - TransForm =========================*/
-        .navStack1{
-            width: 35px;
-            height: 35px;
-            border: #666 solid 2px;
-            background: none;
-            position: relative;
-            margin:25px auto;
-        }
-        .navStack1 span {
-            height: 3px;
-            width: 15px;
-            top: 22px;
-            position: absolute;
-            margin: 0 3px;
-            border: 2px solid #666;
-            left: 12px;
-        }
-        .navStack1 span:nth-child(1){
-            transition: 0.4s;
-            background: #666;
-            transform:  rotate(45deg);
-            transition: all 0.4s ease-in-out;
-        }
-        .navStack1 span:nth-child(2) {
-            height: 17px;
-            width: 17px;
-            top: 2px;
-            background: #FFF;
-            border-radius: 50%;
-            transition: all 0.4s ease-in-out;
-            transform: rotate(45deg);
-            left: -1px;
-        }
-        .navStack1 span.active:nth-child(2),
-        .navStack1 span.active:nth-child(1){
-            height:2px;
-            width:25px;
-            border-radius:0;
-            top:15px;
-            left: 0px;
-        }
-        .navStack1 span.active:nth-child(2){
-            background: #666;
-            transform: rotate(-45deg);
-        }
-        .navStack1 span:nth-child(3) {
-            display: none;
-        }
+#anIconsHome .iconPack:last-of-type {
+    border: none;
+}
 
-    /*========================= Search Glass to X - Eplode+Twist =========================*/
-        .navStack2{
-            width: 35px;
-            height: 35px;
-            border: #666 solid 2px;
-            background: none;
-            position: relative;
-            margin:25px auto;
-        }
-        .navStack2 span {
-            position: absolute;
-        }
-        .navStack2 span:nth-child(1){
-            background: #666 none repeat scroll 0 0;
-            height: 3px;
-            left: 16px;
-            top: 21px;
-            border: 2px solid #666;
-            transform: rotate(45deg);
-            transition: all 0.4s ease-in-out 0.2s;
-            width: 15px;
-        }
-        .navStack2 span:nth-child(2) {
-            height: 17px;
-            width: 17px;
-            top: 2px;
-            left: 2px;
-            background: #FFF;
-            border: 2px solid #666;
-            border-radius: 50%;
-            transition: all 0.4s ease-in-out 0.2s;
-            transform: rotate(45deg);
-            z-index: -1;
-        }
-        .navStack2 span:nth-child(3){
-            visibility: hidden;
-            height: 3px;
-            width: 25px;
-            top: 15px;
-            left: 2px;
-            border: 2px solid #666;
-            background: #FFF;
-            transform: rotate(45deg);
-            transition: all 0.2s ease-in-out;
-        }
-        .navStack2 span.active:nth-child(1){
-            transition: all 0.4s ease-in-out;
-            height:5px;
-            width:25px;
-            top:14px;
-            left: 4px;
-            border-radius:0;
-            background: #FFF;
-            border: 1px solid #FFF;
-        }
-        .navStack2 span.active:nth-child(2){
-            border-radius: 0;
-            top: -2px;
-            left: -2px;
-            height: 35px;
-            width: 35px;
-            transform: rotate(0deg);
-            transition: all 0.4s ease-in-out;
-            background: #666;
-        }
-        .navStack2 span.active:nth-child(3){
-            transition: all 0.2s ease-in-out 0.4s;
-            display: block;
-            height:5px;
-            width:25px;
-            top:14px;
-            left: 4px;
-            border-radius:0;
-            background: #FFF;
-            border: 1px solid #FFF;
-            transform: rotate(135deg);
-            visibility: visible;
-        }
+#anIconsHome h1 {
+    text-align: center;
+    border-bottom: solid 1px #FFF;
+}
 
-    /*========================= Three patty bounce to X =========================*/
-        @keyframes firstPattyDown{
-            0%      {   top:5px;  transform:rotate(0deg); }
-            50%     {   top:26px; transform:rotate(0deg); }
-            100%    {   top:13px; transform:rotate(45deg); }
-        }
-        @keyframes secondPattyDown{
-            0%      {   top:13px;  transform:rotate(0deg); }
-            50%     {   top:26px; transform:rotate(0deg); }
-            100%    {   top:13px; transform:rotate(-45deg); }
-        }
-        @keyframes thirdPattyDown{
-            0%      {   top:21px;  transform:rotate(0deg); }
-            50%     {   top:26px; transform:rotate(0deg); }
-            100%    {   top:13px; transform:rotate(-45deg); }
-        }
-        @keyframes firstPattyUp{
-            0%      {   top:13px; transform:rotate(45deg); }
-            50%     {   top:26px; transform:rotate(0deg); }
-            100%    {   top:5px;  transform:rotate(0deg); }
-        }
-        @keyframes secondPattyUp{
-            0%      {   top:13px; transform:rotate(-45deg); }
-            50%     {   top:26px; transform:rotate(0deg); }
-            100%    {   top:13px;  transform:rotate(0deg); }
-        }
-        @keyframes thirdPattyUp{
-            0%      {   top:13px; transform:rotate(-45deg); }
-            50%     {   top:26px; transform:rotate(0deg); }
-            100%    {   top:21px;  transform:rotate(0deg); }
-        }
-        .navStack3{
-            width: 35px;
-            height: 29px;
-            border: #666 solid 2px;
-            background: none;
-            position: relative;
-            margin:25px auto;
-        }
-        .navStack3 span {
-            height: 3px;
-            width: 29px;
-            top: 22px;
-            position: absolute;
-            margin: 0 3px;
-            background: #666;
-            border: none;
-            left: 0px;
-        }
+#anIconsHome h2 {
+    padding-top: 5px;
+}
 
-        .navStack3 span:nth-child(1){
-            top: 5px;
-            transform: rotate(0deg);
-            animation-name: firstPattyUp;
-            animation-duration: 0.8s;
-        }
-        .navStack3 span:nth-child(2){
-            top: 13px;
-            transform: rotate(0deg);
-            animation-name: secondPattyUp;
-            animation-duration: 0.8s;
-        }
-        .navStack3 span:nth-child(3){
-            top: 21px;
-            transform: rotate(0deg);
-            animation-name: thirdPattyUp;
-            animation-duration: 0.8s;
+.iconPack {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
 
-        }
-        .navStack3 span.active:nth-child(1){
-            animation-name: firstPattyDown;
-            animation-duration: 0.8s;
-            top:13px;
-            transform: rotate(45deg);
-        }
-        .navStack3 span.active:nth-child(2){
-            animation-name: secondPattyDown;
-            animation-duration: 0.8s;
-            top:13px;
-            transform: rotate(-45deg);
-        }
-        .navStack3 span.active:nth-child(3){
-            animation-name: thirdPattyDown;
-            animation-duration: 0.8s;
-            top:13px;
-            transform: rotate(-45deg);
-        }
-
-    /*========================= Three patty Twist to X =========================*/
-        @keyframes lineOneDown{
-            0%      { left: 2px; top: 5px; width: 30px; transform: rotate(   0deg); }
-            50%     { left:11px; top: 5px; width: 22px; transform: rotate( -45deg); }
-            100%    { left: 3px; top:13px; width: 30px; transform: rotate(-135deg); }
-        }
-        @keyframes lineTwoDown{
-            0%      { left:2px; top: 13px; transform: rotate(  0deg); visibility: visible; }
-            50%     { left:2px; top: 13px; transform: rotate(-45deg); visibility: visible; }
-            100%    { visibility: none; }
-        }
-        @keyframes lineThreeDown{
-            0%      { left: 2px; top: 21px; transform: rotate(  0deg); }
-            50%     { left:-5px; top: 20px; transform: rotate(-45deg); }
-            100%    { left: 2px; top: 13px; transform: rotate(-45deg); }
-        }
-        @keyframes lineOneUp{
-            0%      { left: 3px; top:13px; width: 30px; transform: rotate(-135deg); }
-            50%     { left:11px; top: 5px; width: 22px; transform: rotate( -45deg); }
-            100%    { left: 2px; top: 5px; width: 30px; transform: rotate(   0deg); }
-        }
-        @keyframes lineTwoUp{
-            0%      { visibility: none; transform: rotate(-45deg); }
-            50%     { left:2px; top: 13px; transform: rotate(-45deg); visibility: visible; }
-            100%    { left:2px; top: 13px; transform: rotate(  0deg); visibility: visible; }
-        }
-        @keyframes lineThreeUp{
-            0%      { left: 2px; top: 13px; transform: rotate(-45deg); }
-            50%     { left:-5px; top: 20px; transform: rotate(-45deg); }
-            100%    { left: 2px; top: 21px; transform: rotate(  0deg); }
-        }
-        .navStack4{
-            background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-            border: 2px solid #666666;
-            height: 29px;
-            width: 34px;
-            margin: 25px auto;
-            position: relative;
-        }
-        .navStack4 span {
-            background: #666666 none repeat scroll 0 0;
-            border: none;
-            margin: 0;
-            position: absolute;
-            height: 3px;
-            width: 30px;
-        }
-        .navStack4 span:nth-child(1){
-            left: 2px;
-                top: 5px;
-                transform: rotate(0deg);
-            animation-name: lineOneUp;
-            animation-duration: 0.5s;
-        }
-        .navStack4 span:nth-child(2){
-            left: 2px;
-                top: 13px;
-                transform: rotate(0deg);
-                visibility: visible;
-            animation-name: lineTwoUp;
-            animation-duration: 0.5s;
-        }
-        .navStack4 span:nth-child(3){
-            left: 2px;
-                top: 21px;
-                transform: rotate(0deg);
-            animation-name: lineThreeUp;
-            animation-duration: 0.5s;
-        }
-        .navStack4 span.active:nth-child(1){
-                left: 2px;
-            top: 13px;
-            transform: rotate(-135deg);
-            animation-name: lineOneDown;
-            animation-duration: 0.5s;
-        }
-        .navStack4 span.active:nth-child(2){
-            left: 2px;
-            top: 13px;
-            transform: rotate(-45deg);
-            animation-name: lineTwoDown;
-            animation-duration: 0.5s;
-            visibility: none;
-        }
-        .navStack4 span.active:nth-child(3){
-            left: 2px;
-            top: 13px;
-            transform: rotate(-45deg);
-            animation-name: lineThreeDown;
-            animation-duration: 0.5s;
-        }
-
-    /*========================= Three patty SideKiss to X =========================*/
-        @keyframes lineOne0{
-            0%      { height: 3px; top: 5px; transform: rotate(0deg); }
-            33%     { height: 3px; top: 7px; left: 9px; transform: rotate(-45deg); }
-            66%     { height: 2px; top:13px; left: 17px; transform: rotate(-90deg); }
-            100%    { height: 3px; top:13px; left: 3px; transform: rotate(-135deg); }
-        }
-        @keyframes lineOne1{
-            0%      { height: 3px; top:13px; left: 3px; transform: rotate(-135deg); }
-            33%     { height: 2px; top:13px; left:17px; transform: rotate(-90deg); }
-            66%     { height: 3px; top: 7px; left: 9px; transform: rotate(-45deg); }
-            100%    { height: 3px; top: 5px; transform: rotate(0deg); }
-        }
-        @keyframes lineTwo0{
-            0%      { height: 3px; left: 2px; transform: rotate(0deg); visibility: visible; }
-            33%     { height: 2px; left: 2px; transform: rotate(-45deg); visibility: visible; }
-            66%     { height: 2px; left: -13px; transform: rotate(-90deg); visibility: hidden; }
-            100%    {  }
-        }
-        @keyframes lineTwo1{
-            0%      { height: 2px; left: -13px; transform: rotate(-90deg); visibility: hidden; }
-            33%     { height: 2px; left: -13px; transform: rotate(-90deg); visibility: hidden; }
-            66%     { height: 2px; left: 2px; transform: rotate(-45deg); visibility: visible;}
-            100%    { height: 3px; left: 2px; transform: rotate(0deg); visibility: visible; }
-        }
-        @keyframes lineThree0{
-            0%      { height: 3px; top: 20px; transform: rotate(0deg); }
-            33%     { height: 3px; top: 20px; left: -5px; transform: rotate(-45deg); }
-            66%     { height: 2px; left: -13px; top: 14px; transform: rotate(-90deg); }
-            100%    { height: 3px; left: 2px; top: 13px; transform: rotate(-225deg); }
-        }
-        @keyframes lineThree1{
-            0%      { height: 3px; left: 2px; top: 13px; transform: rotate(-225deg); }
-            33%     { height: 2px; left: -13px; top: 14px; transform: rotate(-90deg); }
-            66%     { height: 3px; top: 20px; left: -5px; transform: rotate(-45deg); }
-            100%    { height: 3px; top: 20px; transform: rotate(0deg); }
-        }
-
-        .navStack5{
-            width: 34px;
-            height:29px;
-            border: #666 solid 2px;
-            background: none;
-            position: relative;
-            margin:25px auto;
-        }
-        .navStack5 span {
-            position: absolute;
-            margin: 0;
-            background: #666;
-            border: none;
-            width: 30px;
-            left: 2px;
-        }
-
-        .navStack5 span:nth-child(1){
-            height: 3px;
-            top: 5px;
-            transform: rotate(0deg);
-            animation-name: lineOne1;
-            animation-duration: 0.8s;
-        }
-        .navStack5 span:nth-child(2){
-            height: 3px;
-            top: 13px;
-            transform: rotate(0deg);
-            visibility: visible;
-            animation-name: lineTwo1;
-            animation-duration: 0.8s;
-        }
-        .navStack5 span:nth-child(3){
-            height: 3px;
-            top: 21px;
-            transform: rotate(0deg);
-            animation-name: lineThree1;
-            animation-duration: 0.8s;
-        }
-
-        .navStack5 span.active:nth-child(1){
-            height: 3px;
-            left: 3px;
-            top: 13px;
-            transform: rotate(-135deg);
-            animation-name: lineOne0;
-            animation-duration: 0.8s;
-        }
-        .navStack5 span.active:nth-child(2){
-            left: -13px;
-            height: 2px;
-            visibility: hidden;
-            transform: rotate(-90deg);
-            animation-name: lineTwo0;
-            animation-duration: 0.8s;
-        }
-        .navStack5 span.active:nth-child(3){
-            height: 3px;
-            left: 2px;
-            top: 13px;
-            transform: rotate(-225deg);
-            animation-name: lineThree0;
-            animation-duration: 0.8s;
-        }
-
-    /*========================= Three patty Smash + Spin =========================*/
-        @keyframes topBar0{
-            0%      { top:13px; transform: rotate(45deg); }
-            50%     { top:13px; transform: rotate( 0deg); }
-            100%    { top: 5px; transform: rotate( 0deg); }
-        }
-        @keyframes topBar1{
-            0%      { top: 5px; transform: rotate( 0deg); }
-            50%     { top:13px; transform: rotate( 0deg); }
-            100%    { top:13px; transform: rotate(45deg); }
-        }
-        @keyframes midBar0{
-            0%      { opacity: 0; }
-            50%     { opacity: 0; }
-            100%    { opacity: 1; }
-        }
-        @keyframes midBar1{
-            0%      { opacity: 1; }
-            50%     { opacity: 1; }
-            100%    { opacity: 0; }
-        }
-        @keyframes bottomBar0{
-            0%      { top:13px; transform: rotate(135deg); }
-            50%     { top:13px; transform: rotate( 0deg); }
-            100%    { top:21px; transform: rotate( 0deg); }
-        }
-        @keyframes bottomBar1{
-            0%      { top:21px; transform: rotate( 0deg); }
-            50%     { top:13px; transform: rotate( 0deg); }
-            100%    { top:13px; transform: rotate(135deg); }
-        }
-        .navStack6{
-            width: 35px;
-            height: 29px;
-            border: #666 solid 2px;
-            background: none;
-            position: relative;
-            margin:25px auto;
-        }
-        .navStack6 span {
-            height: 3px;
-            width: 29px;
-            top: 22px;
-            position: absolute;
-            margin: 0 3px;
-            background: #666;
-            border: none;
-            left: 0px;
-        }
-        .navStack6 span:nth-child(1){
-            top: 5px;
-            transform: rotate(0deg);
-            animation-name: topBar0;
-            animation-duration: 0.8s;
-        }
-        .navStack6 span:nth-child(2){
-            top: 13px;
-            animation-name: midBar0;
-            animation-duration: 0.4s;
-            transform: rotate(0deg);
-            opacity: 1;
-        }
-        .navStack6 span:nth-child(3){
-            top: 21px;
-            transform: rotate(0deg);
-            animation-name: bottomBar0;
-            animation-duration: 0.8s;
-        }
-        .navStack6 span.active:nth-child(1){
-            top:13px;
-            transform: rotate(45deg);
-            animation-name: topBar1;
-            animation-duration: 0.8s;
-        }
-        .navStack6 span.active:nth-child(2){
-            animation-name: midBar1;
-            animation-duration: 0.4s;
-            opacity: 0;
-        }
-        .navStack6 span.active:nth-child(3){
-            top:13px;
-            transform: rotate(135deg);
-            animation-name: bottomBar1;
-            animation-duration: 0.8s;
-        }
-
-    /*========================= Arrow up to Arrow down, simple spin -- USE JS-1 =========================*/
-        @keyframes arrowSpin0{
-            0%{ transform: rotate(0deg); }
-            100%{ transform: rotate(180deg); }
-        }
-        @keyframes arrowSpin1{
-            0%{ transform: rotate(180deg); }
-            100%{ transform: rotate(360deg); }
-        }
-        .navStack7{
-            width: 35px;
-            height: 35px;
-            border: none;
-            background: none;
-            position: relative;
-            margin:25px auto;
-            transform: rotate(0deg);
-            animation-name: arrowSpin1;
-            animation-duration: 0.4s;
-        }
-        .navStack7.active{
-            transform: rotate(180deg);
-            animation-name: arrowSpin0;
-            animation-duration: 0.4s;
-        }
-        .navStack7 span {
-            position: absolute;
-            margin: 0;
-            background: #666;
-            border: none;
-            left: 0px;
-        }
-        .navStack7 span:nth-child(1){
-            height: 26px;
-            width: 3px;
-            top: 5px;
-            left: 16px;
-        }
-        .navStack7 span:nth-child(2){
-            height: 16px;
-            left: 11px;
-            top: 2px;
-            transform: rotate(45deg);
-            width: 4px;
-        }
-        .navStack7 span:nth-child(3){
-            height: 16px;
-            left: 20px;
-            top: 2px;
-            transform: rotate(-45deg);
-            width: 4px;
-        }
-
-    /*========================= Arrow up to Arrow down, transform =========================*/
-        @keyframes lTopDown{
-            0%      { left: 11px; top: 2px; transform: rotate(45deg); }
-            49%     { left: 16px; top: 5px; transform: rotate( 0deg); }
-            50%     { left: 16px; top:16px; transform: rotate( 0deg); }
-            100%    { left: 11px; top:18px; transform: rotate(-45deg); }
-        }
-        @keyframes rTopDown{
-            0%      { left: 20px; top: 2px; transform: rotate(-45deg); }
-            49%     { left: 16px; top: 5px; transform: rotate( 0deg); }
-            50%     { left: 16px; top:16px; transform: rotate( 0deg); }
-            100%    { left: 21px; top:18px; transform: rotate(45deg); }
-        }
-        @keyframes lbottomUp{
-            0%      { left: 11px; top:18px; transform: rotate(-45deg); }
-            49%     { left: 16px; top:16px; transform: rotate( 0deg); }
-            50%     { left: 16px; top: 5px; transform: rotate( 0deg); }
-            100%    { left: 11px; top: 2px; transform: rotate(45deg); }
-        }
-        @keyframes rbottomUp{
-            0%      { left: 21px; top:18px; transform: rotate(45deg); }
-            49%     { left: 16px; top:16px; transform: rotate( 0deg); }
-            50%     { left: 16px; top: 5px; transform: rotate( 0deg); }
-            100%    { left: 20px; top: 2px; transform: rotate(-45deg); }
-        }
-
-        .navStack8{
-            width: 35px;
-            height: 35px;
-            border: none;
-            background: none;
-            position: relative;
-            margin:25px auto;
-            transform: rotate(0deg);
-        }
-        .navStack8 span {
-            position: absolute;
-            margin: 0;
-            background: #666;
-            border: none;
-            left: 0px;
-            width: 3px;
-            height: 16px;
-        }
-        .navStack8 span:nth-child(1){
-            height: 26px;
-            top: 5px;
-            left: 16px;
-        }
-        .navStack8 span:nth-child(2){
-            left: 11px;
-            top: 2px;
-            transform: rotate(45deg);
-            animation-name: lbottomUp;
-            animation-duration: 0.5s;
-        }
-        .navStack8 span:nth-child(3){
-            left: 21px;
-            top: 2px;
-            transform: rotate(-45deg);
-            animation-name: rbottomUp;
-            animation-duration: 0.5s;
-        }
-        .navStack8 span.active:nth-child(2){
-            left: 11px;
-            top: 18px;
-            transform: rotate(-45deg);
-            animation-name: lTopDown;
-            animation-duration: 0.5s;
-        }
-        .navStack8 span.active:nth-child(3){
-            left: 21px;
-            top: 18px;
-            transform: rotate(45deg);
-            animation-name: rTopDown;
-            animation-duration: 0.5s;
-        }
-
-    /*========================= Profile smash to X =========================*/
-        @keyframes topCircle0{
-            0%      { top: 15px; left:12px; transform: rotate(  0deg); border-radius: 50%; height:10px; width: 10px; }
-            50%     { top: 33px; left: 5px; transform: rotate(  0deg); border-radius: 0px; height: 3px; width: 25px; }
-            100%    { top: 17px; left: 5px; transform: rotate(-45deg); }
-        }
-        @keyframes topCircle1{
-            0%      { top: 17px; left: 5px; transform: rotate(-45deg); border-radius: 0px; height: 3px; width: 25px; }
-            50%     { top: 33px; left: 5px; transform: rotate(  0deg); border-radius: 0px; height: 3px; width: 25px; }
-            100%    { top: 15px; left:12px; transform: rotate(  0deg); border-radius: 50%; height:10px; width: 10px; }
-        }
-        @keyframes bottomCircle0{
-            0%      { top: 25px; transform: rotate( 0deg); border-top-left-radius: 20px; border-top-right-radius: 20px; height: 10px; width: 25px; }
-            50%     { top: 33px; transform: rotate( 0deg); border-radius: 0px; height: 3px; width: 25px; }
-            100%    { top: 17px; transform: rotate(45deg); }
-        }
-        @keyframes bottomCircle1{
-            0%      { top: 17px; transform: rotate(45deg); border-radius: 0px; height: 3px; width: 25px; }
-            50%     { top: 33px; transform: rotate( 0deg); border-radius: 0px; height: 3px; width: 25px; }
-            100%    { top: 25px; transform: rotate(0deg); border-top-left-radius: 20px; border-top-right-radius: 20px; height: 10px; width: 25px; }
-
-        }
-        .navStack9{
-            width: 35px;
-            height: 35px;
-            border: none;
-            background: none;
-            position: relative;
-            margin:25px auto;
-            transform: rotate(0deg);
-        }
-        .navStack9 span {
-            position: absolute;
-            margin: 0;
-            background: #666;
-            border: none;
-            left: 0px;
-            transform: rotate(0deg);
-        }
-        .navStack9 span:nth-child(1){
-            height: 10px;
-            width: 10px;
-            top: 15px;
-            left: 12px;
-            border-radius: 50%;
-            animation-name: topCircle1;
-            animation-duration: 0.8s;
-        }
-        .navStack9 span:nth-child(2){
-            height: 10px;
-            width: 25px;
-            left: 5px;
-            top: 25px;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            animation-name: bottomCircle1;
-            animation-duration: 0.8s;
-        }
-        .navStack9 span:nth-child(3){
-            display: none;
-        }
-        .navStack9 span.active:nth-child(1){
-            border-radius: 0;
-            height: 3px;
-            left: 5px;
-            top: 17px;
-            transform: rotate(-45deg);
-            width: 25px;
-            animation-name: topCircle0;
-            animation-duration: 0.8s;
-        }
-        .navStack9 span.active:nth-child(2){
-            border-radius: 0;
-            height: 3px;
-            top: 17px;
-            transform: rotate(45deg);
-            width: 25px;
-            animation-name: bottomCircle0;
-            animation-duration: 0.8s;
-        }
-
-    /*========================= Profile transform to X =========================*/
-        .navStack10{
-                width: 35px;
-                height: 35px;
-                border: none;
-                background: none;
-                position: relative;
-                margin:25px auto;
-                transform: rotate(0deg);
-        }
-        .navStack10 span {
-                position: absolute;
-                margin: 0;
-                background: #666;
-                border: none;
-                left: 0px;
-                transform: rotate(0deg);
-        }
-        .navStack10 span:nth-child(1){
-                height: 10px;
-                width: 10px;
-                top: 15px;
-                left: 12px;
-                border-radius: 50%;
-            transition: all 0.4s ease-in-out;
-        }
-        .navStack10 span:nth-child(2){
-            height: 10px;
-            width: 25px;
-            left: 5px;
-            top: 25px;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            transition: all 0.4s ease-in-out;
-        }
-        .navStack10 span:nth-child(3){
-            display: none;
-        }
-        .navStack10 span.active:nth-child(1){
-            border-radius: 0;
-            height: 3px;
-            width: 25px;
-            left: 5px;
-            top: 17px;
-            transform: rotate(-45deg);
-        }
-        .navStack10 span.active:nth-child(2){
-            border-radius: 0;
-            height: 3px;
-            width: 25px;
-            top: 17px;
-            transform: rotate(45deg);
-        }
-
-    /*========================= Profile crush+spin to X =========================*/
-        @keyframes topTwistUp{
-            0%      { border-radius:50%; height:10px; width: 10px; top: 15px; left:12px; transform: rotate(0deg); }
-            50%     { border-radius:  0; height: 3px; width: 25px; top: 17px; left: 5px; transform: rotate(-45deg); }
-            75%     { transform: rotate(-135deg); }
-            100%    { transform: rotate(-135deg); }
-        }
-        @keyframes bottomTwistUp{
-            0%      { height:10px; width: 25px; left: 5px; top: 25px; transform: rotate( 0deg); border-top-left-radius: 20px; border-top-right-radius: 20px; }
-            50%     { height: 3px; width: 25px; left: 5px; top: 17px; transform: rotate(-45deg); border-radius:  0; }
-            75%     { transform: rotate(-135deg); }
-            100%    { transform: rotate(-225deg); }
-        }
-        @keyframes topTwistDown{
-            0%      { transform: rotate(-135deg); height: 3px; width: 25px; left: 5px; top: 17px; border-radius:  0; }
-            25%     { transform: rotate(-135deg); height: 3px; width: 25px; left: 5px; top: 17px; border-radius:  0; }
-            50%     { border-radius:  0; height: 3px; width: 25px; top: 17px; left: 5px; transform: rotate(-45deg); }
-            100%    { border-radius:50%; height:10px; width: 10px; top: 15px; left:12px; transform: rotate(0deg); }
-        }
-        @keyframes bottomTwistDown{
-            0%      { transform: rotate(-225deg); height: 3px; width: 25px; left: 5px; top: 17px; border-radius:  0; }
-            25%     { transform: rotate(-135deg); height: 3px; width: 25px; left: 5px; top: 17px; border-radius:  0; }
-            50%     { height: 3px; width: 25px; left: 5px; top: 17px; transform: rotate(-45deg); border-radius:  0; }
-            100%    { height:10px; width: 25px; left: 5px; top: 25px; transform: rotate( 0deg); border-top-left-radius: 20px; border-top-right-radius: 20px; }
-        }
-        .navStack11{
-                width: 35px;
-                height: 35px;
-                border: none;
-                background: none;
-                position: relative;
-                margin:25px auto;
-                transform: rotate(0deg);
-        }
-        .navStack11 span {
-                position: absolute;
-                margin: 0;
-                background: #666;
-                border: none;
-                left: 0px;
-                transform: rotate(0deg);
-        }
-        .navStack11 span:nth-child(1){
-                height: 10px;
-                width: 10px;
-                top: 15px;
-                left: 12px;
-                animation-name: topTwistDown;
-                animation-duration: 0.5s;
-                border-radius: 50%;
-        }
-        .navStack11 span:nth-child(2){
-            height: 10px;
-            width: 25px;
-            left: 5px;
-            top: 25px;
-                animation-name: bottomTwistDown;
-                animation-duration: 0.5s;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-        }
-        .navStack11 span:nth-child(3){
-            display: none;
-        }
-        .navStack11 span.active:nth-child(1){
-            border-radius: 0;
-            height: 3px;
-            width: 25px;
-            left: 5px;
-            top: 17px;
-                animation-name: topTwistUp;
-                animation-duration: 0.5s;
-            transform: rotate(-135deg);
-        }
-        .navStack11 span.active:nth-child(2){
-            border-radius: 0;
-            height: 3px;
-            width: 25px;
-            top: 17px;
-                animation-name: bottomTwistUp;
-                animation-duration: 0.5s;
-            transform: rotate(-225deg);
-        }
-
-    /*========================= Prevents animation on page load, managed through js class removal =========================*/
-        .preload * {
-          -webkit-transition: none !important;
-          -moz-transition: none !important;
-          -ms-transition: none !important;
-          -o-transition: none !important;
-          -webkit-animation: none !important;
-          -moz-animation: none !important;
-          -ms-animation: none !important;
-          -o-animation: none !important;
-        }
+.anicon {
+    display: inline-block;
+}
 
 
+/*========================= Search Glass to X - Spin =========================*/
+
+.navStack0 {
+    width: 35px;
+    height: 35px;
+    border: #666 solid 2px;
+    background: none;
+    position: relative;
+    margin: 25px auto;
+}
+
+.navStack0 span {
+    height: 3px;
+    width: 15px;
+    top: 22px;
+    position: absolute;
+    margin: 0 3px;
+    border: 2px solid #666;
+    left: 12px;
+}
+
+.navStack0 span:nth-child(1) {
+    transition: 0.4s;
+    background: #666;
+    transform: rotate(45deg);
+    transition: all 0.4s ease-in-out;
+}
+
+.navStack0 span:nth-child(2) {
+    height: 17px;
+    width: 17px;
+    top: 2px;
+    background: #FFF;
+    border-radius: 50%;
+    transition: all 0.4s ease-in-out;
+    transform: rotate(45deg);
+    left: -1px;
+}
+
+.navStack0 span.active:nth-child(1),
+.navStack0 span.active:nth-child(2) {
+    height: 2px;
+    width: 25px;
+    border-radius: 0;
+    top: 15px;
+    left: 0px;
+    background: #666;
+    transform: rotate(315deg);
+}
+
+.navStack0 span.active:nth-child(2) {
+    transform: rotate(405deg);
+}
+
+.navStack0 span:nth-child(3) {
+    display: none;
+}
+
+
+/*========================= Search Glass to X - TransForm =========================*/
+
+.navStack1 {
+    width: 35px;
+    height: 35px;
+    border: #666 solid 2px;
+    background: none;
+    position: relative;
+    margin: 25px auto;
+}
+
+.navStack1 span {
+    height: 3px;
+    width: 15px;
+    top: 22px;
+    position: absolute;
+    margin: 0 3px;
+    border: 2px solid #666;
+    left: 12px;
+}
+
+.navStack1 span:nth-child(1) {
+    transition: 0.4s;
+    background: #666;
+    transform: rotate(45deg);
+    transition: all 0.4s ease-in-out;
+}
+
+.navStack1 span:nth-child(2) {
+    height: 17px;
+    width: 17px;
+    top: 2px;
+    background: #FFF;
+    border-radius: 50%;
+    transition: all 0.4s ease-in-out;
+    transform: rotate(45deg);
+    left: -1px;
+}
+
+.navStack1 span.active:nth-child(2),
+.navStack1 span.active:nth-child(1) {
+    height: 2px;
+    width: 25px;
+    border-radius: 0;
+    top: 15px;
+    left: 0px;
+}
+
+.navStack1 span.active:nth-child(2) {
+    background: #666;
+    transform: rotate(-45deg);
+}
+
+.navStack1 span:nth-child(3) {
+    display: none;
+}
+
+
+/*========================= Search Glass to X - Eplode+Twist =========================*/
+
+.navStack2 {
+    width: 35px;
+    height: 35px;
+    border: #666 solid 2px;
+    background: none;
+    position: relative;
+    margin: 25px auto;
+}
+
+.navStack2 span {
+    position: absolute;
+}
+
+.navStack2 span:nth-child(1) {
+    background: #666 none repeat scroll 0 0;
+    height: 3px;
+    left: 16px;
+    top: 21px;
+    border: 2px solid #666;
+    transform: rotate(45deg);
+    transition: all 0.4s ease-in-out 0.2s;
+    width: 15px;
+    z-index: 1;
+}
+
+.navStack2 span:nth-child(2) {
+    height: 17px;
+    width: 17px;
+    top: 2px;
+    left: 2px;
+    background: #FFF;
+    border: 2px solid #666;
+    border-radius: 50%;
+    transition: all 0.4s ease-in-out 0.2s;
+    transform: rotate(45deg);
+    z-index: 0;
+}
+
+.navStack2 span:nth-child(3) {
+    visibility: hidden;
+    height: 3px;
+    width: 25px;
+    top: 15px;
+    left: 2px;
+    border: 2px solid #666;
+    background: #FFF;
+    transform: rotate(45deg);
+    transition: all 0.2s ease-in-out;
+    z-index: 1;
+}
+
+.navStack2 span.active:nth-child(1) {
+    transition: all 0.4s ease-in-out;
+    height: 5px;
+    width: 25px;
+    top: 14px;
+    left: 4px;
+    border-radius: 0;
+    background: #FFF;
+    border: 1px solid #FFF;
+}
+
+.navStack2 span.active:nth-child(2) {
+    border-radius: 0;
+    top: -2px;
+    left: -2px;
+    height: 35px;
+    width: 35px;
+    transform: rotate(0deg);
+    transition: all 0.4s ease-in-out;
+    background: #666;
+}
+
+.navStack2 span.active:nth-child(3) {
+    transition: all 0.2s ease-in-out 0.4s;
+    display: block;
+    height: 5px;
+    width: 25px;
+    top: 14px;
+    left: 4px;
+    border-radius: 0;
+    background: #FFF;
+    border: 1px solid #FFF;
+    transform: rotate(135deg);
+    visibility: visible;
+}
+
+
+/*========================= Three patty bounce to X =========================*/
+
+@keyframes firstPattyDown {
+    0% {
+        top: 5px;
+        transform: rotate(0deg);
+    }
+    50% {
+        top: 26px;
+        transform: rotate(0deg);
+    }
+    100% {
+        top: 13px;
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes secondPattyDown {
+    0% {
+        top: 13px;
+        transform: rotate(0deg);
+    }
+    50% {
+        top: 26px;
+        transform: rotate(0deg);
+    }
+    100% {
+        top: 13px;
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes thirdPattyDown {
+    0% {
+        top: 21px;
+        transform: rotate(0deg);
+    }
+    50% {
+        top: 26px;
+        transform: rotate(0deg);
+    }
+    100% {
+        top: 13px;
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes firstPattyUp {
+    0% {
+        top: 13px;
+        transform: rotate(45deg);
+    }
+    50% {
+        top: 26px;
+        transform: rotate(0deg);
+    }
+    100% {
+        top: 5px;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes secondPattyUp {
+    0% {
+        top: 13px;
+        transform: rotate(-45deg);
+    }
+    50% {
+        top: 26px;
+        transform: rotate(0deg);
+    }
+    100% {
+        top: 13px;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes thirdPattyUp {
+    0% {
+        top: 13px;
+        transform: rotate(-45deg);
+    }
+    50% {
+        top: 26px;
+        transform: rotate(0deg);
+    }
+    100% {
+        top: 21px;
+        transform: rotate(0deg);
+    }
+}
+
+.navStack3 {
+    width: 35px;
+    height: 29px;
+    border: #666 solid 2px;
+    background: none;
+    position: relative;
+    margin: 25px auto;
+}
+
+.navStack3 span {
+    height: 3px;
+    width: 29px;
+    top: 22px;
+    position: absolute;
+    margin: 0 3px;
+    background: #666;
+    border: none;
+    left: 0px;
+}
+
+.navStack3 span:nth-child(1) {
+    top: 5px;
+    transform: rotate(0deg);
+    animation-name: firstPattyUp;
+    animation-duration: 0.8s;
+}
+
+.navStack3 span:nth-child(2) {
+    top: 13px;
+    transform: rotate(0deg);
+    animation-name: secondPattyUp;
+    animation-duration: 0.8s;
+}
+
+.navStack3 span:nth-child(3) {
+    top: 21px;
+    transform: rotate(0deg);
+    animation-name: thirdPattyUp;
+    animation-duration: 0.8s;
+}
+
+.navStack3 span.active:nth-child(1) {
+    animation-name: firstPattyDown;
+    animation-duration: 0.8s;
+    top: 13px;
+    transform: rotate(45deg);
+}
+
+.navStack3 span.active:nth-child(2) {
+    animation-name: secondPattyDown;
+    animation-duration: 0.8s;
+    top: 13px;
+    transform: rotate(-45deg);
+}
+
+.navStack3 span.active:nth-child(3) {
+    animation-name: thirdPattyDown;
+    animation-duration: 0.8s;
+    top: 13px;
+    transform: rotate(-45deg);
+}
+
+
+/*========================= Three patty Twist to X =========================*/
+
+@keyframes lineOneDown {
+    0% {
+        left: 2px;
+        top: 5px;
+        width: 30px;
+        transform: rotate( 0deg);
+    }
+    50% {
+        left: 11px;
+        top: 5px;
+        width: 22px;
+        transform: rotate( -45deg);
+    }
+    100% {
+        left: 3px;
+        top: 13px;
+        width: 30px;
+        transform: rotate(-135deg);
+    }
+}
+
+@keyframes lineTwoDown {
+    0% {
+        left: 2px;
+        top: 13px;
+        transform: rotate( 0deg);
+        visibility: visible;
+    }
+    50% {
+        left: 2px;
+        top: 13px;
+        transform: rotate(-45deg);
+        visibility: visible;
+    }
+    100% {
+        visibility: none;
+    }
+}
+
+@keyframes lineThreeDown {
+    0% {
+        left: 2px;
+        top: 21px;
+        transform: rotate( 0deg);
+    }
+    50% {
+        left: -5px;
+        top: 20px;
+        transform: rotate(-45deg);
+    }
+    100% {
+        left: 2px;
+        top: 13px;
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes lineOneUp {
+    0% {
+        left: 3px;
+        top: 13px;
+        width: 30px;
+        transform: rotate(-135deg);
+    }
+    50% {
+        left: 11px;
+        top: 5px;
+        width: 22px;
+        transform: rotate( -45deg);
+    }
+    100% {
+        left: 2px;
+        top: 5px;
+        width: 30px;
+        transform: rotate( 0deg);
+    }
+}
+
+@keyframes lineTwoUp {
+    0% {
+        visibility: none;
+        transform: rotate(-45deg);
+    }
+    50% {
+        left: 2px;
+        top: 13px;
+        transform: rotate(-45deg);
+        visibility: visible;
+    }
+    100% {
+        left: 2px;
+        top: 13px;
+        transform: rotate( 0deg);
+        visibility: visible;
+    }
+}
+
+@keyframes lineThreeUp {
+    0% {
+        left: 2px;
+        top: 13px;
+        transform: rotate(-45deg);
+    }
+    50% {
+        left: -5px;
+        top: 20px;
+        transform: rotate(-45deg);
+    }
+    100% {
+        left: 2px;
+        top: 21px;
+        transform: rotate( 0deg);
+    }
+}
+
+.navStack4 {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 2px solid #666666;
+    height: 29px;
+    width: 34px;
+    margin: 25px auto;
+    position: relative;
+}
+
+.navStack4 span {
+    background: #666666 none repeat scroll 0 0;
+    border: none;
+    margin: 0;
+    position: absolute;
+    height: 3px;
+    width: 30px;
+}
+
+.navStack4 span:nth-child(1) {
+    left: 2px;
+    top: 5px;
+    transform: rotate(0deg);
+    animation-name: lineOneUp;
+    animation-duration: 0.5s;
+}
+
+.navStack4 span:nth-child(2) {
+    left: 2px;
+    top: 13px;
+    transform: rotate(0deg);
+    visibility: visible;
+    animation-name: lineTwoUp;
+    animation-duration: 0.5s;
+}
+
+.navStack4 span:nth-child(3) {
+    left: 2px;
+    top: 21px;
+    transform: rotate(0deg);
+    animation-name: lineThreeUp;
+    animation-duration: 0.5s;
+}
+
+.navStack4 span.active:nth-child(1) {
+    left: 2px;
+    top: 13px;
+    transform: rotate(-135deg);
+    animation-name: lineOneDown;
+    animation-duration: 0.5s;
+}
+
+.navStack4 span.active:nth-child(2) {
+    left: 2px;
+    top: 13px;
+    transform: rotate(-45deg);
+    animation-name: lineTwoDown;
+    animation-duration: 0.5s;
+    visibility: none;
+}
+
+.navStack4 span.active:nth-child(3) {
+    left: 2px;
+    top: 13px;
+    transform: rotate(-45deg);
+    animation-name: lineThreeDown;
+    animation-duration: 0.5s;
+}
+
+
+/*========================= Three patty SideKiss to X =========================*/
+
+@keyframes lineOne0 {
+    0% {
+        height: 3px;
+        top: 5px;
+        transform: rotate(0deg);
+    }
+    33% {
+        height: 3px;
+        top: 7px;
+        left: 9px;
+        transform: rotate(-45deg);
+    }
+    66% {
+        height: 2px;
+        top: 13px;
+        left: 17px;
+        transform: rotate(-90deg);
+    }
+    100% {
+        height: 3px;
+        top: 13px;
+        left: 3px;
+        transform: rotate(-135deg);
+    }
+}
+
+@keyframes lineOne1 {
+    0% {
+        height: 3px;
+        top: 13px;
+        left: 3px;
+        transform: rotate(-135deg);
+    }
+    33% {
+        height: 2px;
+        top: 13px;
+        left: 17px;
+        transform: rotate(-90deg);
+    }
+    66% {
+        height: 3px;
+        top: 7px;
+        left: 9px;
+        transform: rotate(-45deg);
+    }
+    100% {
+        height: 3px;
+        top: 5px;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes lineTwo0 {
+    0% {
+        height: 3px;
+        left: 2px;
+        transform: rotate(0deg);
+        visibility: visible;
+    }
+    33% {
+        height: 2px;
+        left: 2px;
+        transform: rotate(-45deg);
+        visibility: visible;
+    }
+    66% {
+        height: 2px;
+        left: -13px;
+        transform: rotate(-90deg);
+        visibility: hidden;
+    }
+    100% {}
+}
+
+@keyframes lineTwo1 {
+    0% {
+        height: 2px;
+        left: -13px;
+        transform: rotate(-90deg);
+        visibility: hidden;
+    }
+    33% {
+        height: 2px;
+        left: -13px;
+        transform: rotate(-90deg);
+        visibility: hidden;
+    }
+    66% {
+        height: 2px;
+        left: 2px;
+        transform: rotate(-45deg);
+        visibility: visible;
+    }
+    100% {
+        height: 3px;
+        left: 2px;
+        transform: rotate(0deg);
+        visibility: visible;
+    }
+}
+
+@keyframes lineThree0 {
+    0% {
+        height: 3px;
+        top: 20px;
+        transform: rotate(0deg);
+    }
+    33% {
+        height: 3px;
+        top: 20px;
+        left: -5px;
+        transform: rotate(-45deg);
+    }
+    66% {
+        height: 2px;
+        left: -13px;
+        top: 14px;
+        transform: rotate(-90deg);
+    }
+    100% {
+        height: 3px;
+        left: 2px;
+        top: 13px;
+        transform: rotate(-225deg);
+    }
+}
+
+@keyframes lineThree1 {
+    0% {
+        height: 3px;
+        left: 2px;
+        top: 13px;
+        transform: rotate(-225deg);
+    }
+    33% {
+        height: 2px;
+        left: -13px;
+        top: 14px;
+        transform: rotate(-90deg);
+    }
+    66% {
+        height: 3px;
+        top: 20px;
+        left: -5px;
+        transform: rotate(-45deg);
+    }
+    100% {
+        height: 3px;
+        top: 20px;
+        transform: rotate(0deg);
+    }
+}
+
+.navStack5 {
+    width: 34px;
+    height: 29px;
+    border: #666 solid 2px;
+    background: none;
+    position: relative;
+    margin: 25px auto;
+}
+
+.navStack5 span {
+    position: absolute;
+    margin: 0;
+    background: #666;
+    border: none;
+    width: 30px;
+    left: 2px;
+}
+
+.navStack5 span:nth-child(1) {
+    height: 3px;
+    top: 5px;
+    transform: rotate(0deg);
+    animation-name: lineOne1;
+    animation-duration: 0.8s;
+}
+
+.navStack5 span:nth-child(2) {
+    height: 3px;
+    top: 13px;
+    transform: rotate(0deg);
+    visibility: visible;
+    animation-name: lineTwo1;
+    animation-duration: 0.8s;
+}
+
+.navStack5 span:nth-child(3) {
+    height: 3px;
+    top: 21px;
+    transform: rotate(0deg);
+    animation-name: lineThree1;
+    animation-duration: 0.8s;
+}
+
+.navStack5 span.active:nth-child(1) {
+    height: 3px;
+    left: 3px;
+    top: 13px;
+    transform: rotate(-135deg);
+    animation-name: lineOne0;
+    animation-duration: 0.8s;
+}
+
+.navStack5 span.active:nth-child(2) {
+    left: -13px;
+    height: 2px;
+    visibility: hidden;
+    transform: rotate(-90deg);
+    animation-name: lineTwo0;
+    animation-duration: 0.8s;
+}
+
+.navStack5 span.active:nth-child(3) {
+    height: 3px;
+    left: 2px;
+    top: 13px;
+    transform: rotate(-225deg);
+    animation-name: lineThree0;
+    animation-duration: 0.8s;
+}
+
+
+/*========================= Three patty Smash + Spin =========================*/
+
+@keyframes topBar0 {
+    0% {
+        top: 13px;
+        transform: rotate(45deg);
+    }
+    50% {
+        top: 13px;
+        transform: rotate( 0deg);
+    }
+    100% {
+        top: 5px;
+        transform: rotate( 0deg);
+    }
+}
+
+@keyframes topBar1 {
+    0% {
+        top: 5px;
+        transform: rotate( 0deg);
+    }
+    50% {
+        top: 13px;
+        transform: rotate( 0deg);
+    }
+    100% {
+        top: 13px;
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes midBar0 {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes midBar1 {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes bottomBar0 {
+    0% {
+        top: 13px;
+        transform: rotate(135deg);
+    }
+    50% {
+        top: 13px;
+        transform: rotate( 0deg);
+    }
+    100% {
+        top: 21px;
+        transform: rotate( 0deg);
+    }
+}
+
+@keyframes bottomBar1 {
+    0% {
+        top: 21px;
+        transform: rotate( 0deg);
+    }
+    50% {
+        top: 13px;
+        transform: rotate( 0deg);
+    }
+    100% {
+        top: 13px;
+        transform: rotate(135deg);
+    }
+}
+
+.navStack6 {
+    width: 35px;
+    height: 29px;
+    border: #666 solid 2px;
+    background: none;
+    position: relative;
+    margin: 25px auto;
+}
+
+.navStack6 span {
+    height: 3px;
+    width: 29px;
+    top: 22px;
+    position: absolute;
+    margin: 0 3px;
+    background: #666;
+    border: none;
+    left: 0px;
+}
+
+.navStack6 span:nth-child(1) {
+    top: 5px;
+    transform: rotate(0deg);
+    animation-name: topBar0;
+    animation-duration: 0.8s;
+}
+
+.navStack6 span:nth-child(2) {
+    top: 13px;
+    animation-name: midBar0;
+    animation-duration: 0.4s;
+    transform: rotate(0deg);
+    opacity: 1;
+}
+
+.navStack6 span:nth-child(3) {
+    top: 21px;
+    transform: rotate(0deg);
+    animation-name: bottomBar0;
+    animation-duration: 0.8s;
+}
+
+.navStack6 span.active:nth-child(1) {
+    top: 13px;
+    transform: rotate(45deg);
+    animation-name: topBar1;
+    animation-duration: 0.8s;
+}
+
+.navStack6 span.active:nth-child(2) {
+    animation-name: midBar1;
+    animation-duration: 0.4s;
+    opacity: 0;
+}
+
+.navStack6 span.active:nth-child(3) {
+    top: 13px;
+    transform: rotate(135deg);
+    animation-name: bottomBar1;
+    animation-duration: 0.8s;
+}
+
+
+/*========================= Arrow up to Arrow down, simple spin -- USE JS-1 =========================*/
+
+@keyframes arrowSpin0 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes arrowSpin1 {
+    0% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.navStack7 {
+    width: 35px;
+    height: 35px;
+    border: none;
+    background: none;
+    position: relative;
+    margin: 25px auto;
+    transform: rotate(0deg);
+    animation-name: arrowSpin1;
+    animation-duration: 0.4s;
+}
+
+.navStack7.active {
+    transform: rotate(180deg);
+    animation-name: arrowSpin0;
+    animation-duration: 0.4s;
+}
+
+.navStack7 span {
+    position: absolute;
+    margin: 0;
+    background: #666;
+    border: none;
+    left: 0px;
+}
+
+.navStack7 span:nth-child(1) {
+    height: 26px;
+    width: 3px;
+    top: 5px;
+    left: 16px;
+}
+
+.navStack7 span:nth-child(2) {
+    height: 16px;
+    left: 11px;
+    top: 2px;
+    transform: rotate(45deg);
+    width: 4px;
+}
+
+.navStack7 span:nth-child(3) {
+    height: 16px;
+    left: 20px;
+    top: 2px;
+    transform: rotate(-45deg);
+    width: 4px;
+}
+
+
+/*========================= Arrow up to Arrow down, transform =========================*/
+
+@keyframes lTopDown {
+    0% {
+        left: 11px;
+        top: 2px;
+        transform: rotate(45deg);
+    }
+    49% {
+        left: 16px;
+        top: 5px;
+        transform: rotate( 0deg);
+    }
+    50% {
+        left: 16px;
+        top: 16px;
+        transform: rotate( 0deg);
+    }
+    100% {
+        left: 11px;
+        top: 18px;
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes rTopDown {
+    0% {
+        left: 20px;
+        top: 2px;
+        transform: rotate(-45deg);
+    }
+    49% {
+        left: 16px;
+        top: 5px;
+        transform: rotate( 0deg);
+    }
+    50% {
+        left: 16px;
+        top: 16px;
+        transform: rotate( 0deg);
+    }
+    100% {
+        left: 21px;
+        top: 18px;
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes lbottomUp {
+    0% {
+        left: 11px;
+        top: 18px;
+        transform: rotate(-45deg);
+    }
+    49% {
+        left: 16px;
+        top: 16px;
+        transform: rotate( 0deg);
+    }
+    50% {
+        left: 16px;
+        top: 5px;
+        transform: rotate( 0deg);
+    }
+    100% {
+        left: 11px;
+        top: 2px;
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes rbottomUp {
+    0% {
+        left: 21px;
+        top: 18px;
+        transform: rotate(45deg);
+    }
+    49% {
+        left: 16px;
+        top: 16px;
+        transform: rotate( 0deg);
+    }
+    50% {
+        left: 16px;
+        top: 5px;
+        transform: rotate( 0deg);
+    }
+    100% {
+        left: 20px;
+        top: 2px;
+        transform: rotate(-45deg);
+    }
+}
+
+.navStack8 {
+    width: 35px;
+    height: 35px;
+    border: none;
+    background: none;
+    position: relative;
+    margin: 25px auto;
+    transform: rotate(0deg);
+}
+
+.navStack8 span {
+    position: absolute;
+    margin: 0;
+    background: #666;
+    border: none;
+    left: 0px;
+    width: 3px;
+    height: 16px;
+}
+
+.navStack8 span:nth-child(1) {
+    height: 26px;
+    top: 5px;
+    left: 16px;
+}
+
+.navStack8 span:nth-child(2) {
+    left: 11px;
+    top: 2px;
+    transform: rotate(45deg);
+    animation-name: lbottomUp;
+    animation-duration: 0.5s;
+}
+
+.navStack8 span:nth-child(3) {
+    left: 21px;
+    top: 2px;
+    transform: rotate(-45deg);
+    animation-name: rbottomUp;
+    animation-duration: 0.5s;
+}
+
+.navStack8 span.active:nth-child(2) {
+    left: 11px;
+    top: 18px;
+    transform: rotate(-45deg);
+    animation-name: lTopDown;
+    animation-duration: 0.5s;
+}
+
+.navStack8 span.active:nth-child(3) {
+    left: 21px;
+    top: 18px;
+    transform: rotate(45deg);
+    animation-name: rTopDown;
+    animation-duration: 0.5s;
+}
+
+
+/*========================= Profile smash to X =========================*/
+
+@keyframes topCircle0 {
+    0% {
+        top: 15px;
+        left: 12px;
+        transform: rotate( 0deg);
+        border-radius: 50%;
+        height: 10px;
+        width: 10px;
+    }
+    50% {
+        top: 33px;
+        left: 5px;
+        transform: rotate( 0deg);
+        border-radius: 0px;
+        height: 3px;
+        width: 25px;
+    }
+    100% {
+        top: 17px;
+        left: 5px;
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes topCircle1 {
+    0% {
+        top: 17px;
+        left: 5px;
+        transform: rotate(-45deg);
+        border-radius: 0px;
+        height: 3px;
+        width: 25px;
+    }
+    50% {
+        top: 33px;
+        left: 5px;
+        transform: rotate( 0deg);
+        border-radius: 0px;
+        height: 3px;
+        width: 25px;
+    }
+    100% {
+        top: 15px;
+        left: 12px;
+        transform: rotate( 0deg);
+        border-radius: 50%;
+        height: 10px;
+        width: 10px;
+    }
+}
+
+@keyframes bottomCircle0 {
+    0% {
+        top: 25px;
+        transform: rotate( 0deg);
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        height: 10px;
+        width: 25px;
+    }
+    50% {
+        top: 33px;
+        transform: rotate( 0deg);
+        border-radius: 0px;
+        height: 3px;
+        width: 25px;
+    }
+    100% {
+        top: 17px;
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes bottomCircle1 {
+    0% {
+        top: 17px;
+        transform: rotate(45deg);
+        border-radius: 0px;
+        height: 3px;
+        width: 25px;
+    }
+    50% {
+        top: 33px;
+        transform: rotate( 0deg);
+        border-radius: 0px;
+        height: 3px;
+        width: 25px;
+    }
+    100% {
+        top: 25px;
+        transform: rotate(0deg);
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        height: 10px;
+        width: 25px;
+    }
+}
+
+.navStack9 {
+    width: 35px;
+    height: 35px;
+    border: none;
+    background: none;
+    position: relative;
+    margin: 25px auto;
+    transform: rotate(0deg);
+}
+
+.navStack9 span {
+    position: absolute;
+    margin: 0;
+    background: #666;
+    border: none;
+    left: 0px;
+    transform: rotate(0deg);
+}
+
+.navStack9 span:nth-child(1) {
+    height: 10px;
+    width: 10px;
+    top: 15px;
+    left: 12px;
+    border-radius: 50%;
+    animation-name: topCircle1;
+    animation-duration: 0.8s;
+}
+
+.navStack9 span:nth-child(2) {
+    height: 10px;
+    width: 25px;
+    left: 5px;
+    top: 25px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    animation-name: bottomCircle1;
+    animation-duration: 0.8s;
+}
+
+.navStack9 span:nth-child(3) {
+    display: none;
+}
+
+.navStack9 span.active:nth-child(1) {
+    border-radius: 0;
+    height: 3px;
+    left: 5px;
+    top: 17px;
+    transform: rotate(-45deg);
+    width: 25px;
+    animation-name: topCircle0;
+    animation-duration: 0.8s;
+}
+
+.navStack9 span.active:nth-child(2) {
+    border-radius: 0;
+    height: 3px;
+    top: 17px;
+    transform: rotate(45deg);
+    width: 25px;
+    animation-name: bottomCircle0;
+    animation-duration: 0.8s;
+}
+
+
+/*========================= Profile transform to X =========================*/
+
+.navStack10 {
+    width: 35px;
+    height: 35px;
+    border: none;
+    background: none;
+    position: relative;
+    margin: 25px auto;
+    transform: rotate(0deg);
+}
+
+.navStack10 span {
+    position: absolute;
+    margin: 0;
+    background: #666;
+    border: none;
+    left: 0px;
+    transform: rotate(0deg);
+}
+
+.navStack10 span:nth-child(1) {
+    height: 10px;
+    width: 10px;
+    top: 15px;
+    left: 12px;
+    border-radius: 50%;
+    transition: all 0.4s ease-in-out;
+}
+
+.navStack10 span:nth-child(2) {
+    height: 10px;
+    width: 25px;
+    left: 5px;
+    top: 25px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    transition: all 0.4s ease-in-out;
+}
+
+.navStack10 span:nth-child(3) {
+    display: none;
+}
+
+.navStack10 span.active:nth-child(1) {
+    border-radius: 0;
+    height: 3px;
+    width: 25px;
+    left: 5px;
+    top: 17px;
+    transform: rotate(-45deg);
+}
+
+.navStack10 span.active:nth-child(2) {
+    border-radius: 0;
+    height: 3px;
+    width: 25px;
+    top: 17px;
+    transform: rotate(45deg);
+}
+
+
+/*========================= Profile crush+spin to X =========================*/
+
+@keyframes topTwistUp {
+    0% {
+        border-radius: 50%;
+        height: 10px;
+        width: 10px;
+        top: 15px;
+        left: 12px;
+        transform: rotate(0deg);
+    }
+    50% {
+        border-radius: 0;
+        height: 3px;
+        width: 25px;
+        top: 17px;
+        left: 5px;
+        transform: rotate(-45deg);
+    }
+    75% {
+        transform: rotate(-135deg);
+    }
+    100% {
+        transform: rotate(-135deg);
+    }
+}
+
+@keyframes bottomTwistUp {
+    0% {
+        height: 10px;
+        width: 25px;
+        left: 5px;
+        top: 25px;
+        transform: rotate( 0deg);
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    50% {
+        height: 3px;
+        width: 25px;
+        left: 5px;
+        top: 17px;
+        transform: rotate(-45deg);
+        border-radius: 0;
+    }
+    75% {
+        transform: rotate(-135deg);
+    }
+    100% {
+        transform: rotate(-225deg);
+    }
+}
+
+@keyframes topTwistDown {
+    0% {
+        transform: rotate(-135deg);
+        height: 3px;
+        width: 25px;
+        left: 5px;
+        top: 17px;
+        border-radius: 0;
+    }
+    25% {
+        transform: rotate(-135deg);
+        height: 3px;
+        width: 25px;
+        left: 5px;
+        top: 17px;
+        border-radius: 0;
+    }
+    50% {
+        border-radius: 0;
+        height: 3px;
+        width: 25px;
+        top: 17px;
+        left: 5px;
+        transform: rotate(-45deg);
+    }
+    100% {
+        border-radius: 50%;
+        height: 10px;
+        width: 10px;
+        top: 15px;
+        left: 12px;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes bottomTwistDown {
+    0% {
+        transform: rotate(-225deg);
+        height: 3px;
+        width: 25px;
+        left: 5px;
+        top: 17px;
+        border-radius: 0;
+    }
+    25% {
+        transform: rotate(-135deg);
+        height: 3px;
+        width: 25px;
+        left: 5px;
+        top: 17px;
+        border-radius: 0;
+    }
+    50% {
+        height: 3px;
+        width: 25px;
+        left: 5px;
+        top: 17px;
+        transform: rotate(-45deg);
+        border-radius: 0;
+    }
+    100% {
+        height: 10px;
+        width: 25px;
+        left: 5px;
+        top: 25px;
+        transform: rotate( 0deg);
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+}
+
+.navStack11 {
+    width: 35px;
+    height: 35px;
+    border: none;
+    background: none;
+    position: relative;
+    margin: 25px auto;
+    transform: rotate(0deg);
+}
+
+.navStack11 span {
+    position: absolute;
+    margin: 0;
+    background: #666;
+    border: none;
+    left: 0px;
+    transform: rotate(0deg);
+}
+
+.navStack11 span:nth-child(1) {
+    height: 10px;
+    width: 10px;
+    top: 15px;
+    left: 12px;
+    animation-name: topTwistDown;
+    animation-duration: 0.5s;
+    border-radius: 50%;
+}
+
+.navStack11 span:nth-child(2) {
+    height: 10px;
+    width: 25px;
+    left: 5px;
+    top: 25px;
+    animation-name: bottomTwistDown;
+    animation-duration: 0.5s;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.navStack11 span:nth-child(3) {
+    display: none;
+}
+
+.navStack11 span.active:nth-child(1) {
+    border-radius: 0;
+    height: 3px;
+    width: 25px;
+    left: 5px;
+    top: 17px;
+    animation-name: topTwistUp;
+    animation-duration: 0.5s;
+    transform: rotate(-135deg);
+}
+
+.navStack11 span.active:nth-child(2) {
+    border-radius: 0;
+    height: 3px;
+    width: 25px;
+    top: 17px;
+    animation-name: bottomTwistUp;
+    animation-duration: 0.5s;
+    transform: rotate(-225deg);
+}
+
+
+/*========================= Prevents animation on page load, managed through js class removal =========================*/
+
+.preload.anicon * {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    -ms-animation: none !important;
+    -o-animation: none !important;
+}
 
 @media screen and (min-width:951px) {
-
     /***********************************FULL SIZE***********************************/
-
     .body-content {
         width: 900px;
         display: inline-block;
@@ -1343,401 +2070,482 @@
 }
 
 @media screen and (max-width:950px) {
-
     /***********************************TABLET***********************************/
-
     /***********************************HIDDEN ELEMENTS***********************************/
-        .navbar ul.navbar-ul .sub-navbar-ul li a ._nav-bar{
-            display: none;
-        }
-
-        .preload * {
-            -webkit-transition: none !important;
-            -moz-transition: none !important;
-            -ms-transition: none !important;
-            -o-transition: none !important;
-            -webkit-animation: none !important;
-            -moz-animation: none !important;
-            -ms-animation: none !important;
-            -o-animation: none !important;
-        }
-
+    .navbar ul.navbar-ul .sub-navbar-ul li a ._nav-bar {
+        display: none;
+    }
+    .preload * {
+        -webkit-transition: none !important;
+        -moz-transition: none !important;
+        -ms-transition: none !important;
+        -o-transition: none !important;
+        -webkit-animation: none !important;
+        -moz-animation: none !important;
+        -ms-animation: none !important;
+        -o-animation: none !important;
+    }
     /***********************************HIDDEN***********************************/
-        .topLogo{
-            display: none;
-        }
-
-        .body-content {
-            width: 90%;
-            max-width: 900px;
-        }
-
+    .topLogo {
+        display: none;
+    }
+    .body-content {
+        width: 90%;
+        max-width: 900px;
+    }
     /***********************************NAVSTACK & NAVBAR MODS***********************************/
-
-
-        @keyframes firstPattyDown{
-            0%      {   top:5px;  transform:rotate(0deg); }
-            50%     {   top:26px; transform:rotate(0deg); }
-            100%    {   top:13px; transform:rotate(45deg); }
-        }
-        @keyframes secondPattyDown{
-            0%      {   top:13px;  transform:rotate(0deg); }
-            50%     {   top:26px; transform:rotate(0deg); }
-            100%    {   top:13px; transform:rotate(-45deg); }
-        }
-        @keyframes thirdPattyDown{
-            0%      {   top:21px;  transform:rotate(0deg); }
-            50%     {   top:26px; transform:rotate(0deg); }
-            100%    {   top:13px; transform:rotate(-45deg); }
-        }
-        @keyframes firstPattyUp{
-            0%      {   top:13px; transform:rotate(45deg); }
-            50%     {   top:26px; transform:rotate(0deg); }
-            100%    {   top:5px;  transform:rotate(0deg); }
-        }
-        @keyframes secondPattyUp{
-            0%      {   top:13px; transform:rotate(-45deg); }
-            50%     {   top:26px; transform:rotate(0deg); }
-            100%    {   top:13px;  transform:rotate(0deg); }
-        }
-        @keyframes thirdPattyUp{
-            0%      {   top:13px; transform:rotate(-45deg); }
-            50%     {   top:26px; transform:rotate(0deg); }
-            100%    {   top:21px;  transform:rotate(0deg); }
-        }
-        .navStack{
-            width: 35px;
-            height: 29px;
-            border: none;
-            background: none;
-            position: absolute;
-            top: 5px;
-            right: 5px;
-            z-index: 1;
-            display: block;
-        }
-        .navStack span {
-            border-radius: 10px;
-            height: 3px;
-            width: 29px;
-            top: 22px;
-            position: absolute;
-            margin: 0 3px;
-            background: #AAFFEE;
-            border: none;
-            left: 0px;
-        }
-
-        .navStack span:nth-child(1){
+    @keyframes firstPattyDown {
+        0% {
             top: 5px;
             transform: rotate(0deg);
-            animation-name: firstPattyUp;
-            animation-duration: 0.8s;
         }
-        .navStack span:nth-child(2){
+        50% {
+            top: 26px;
+            transform: rotate(0deg);
+        }
+        100% {
             top: 13px;
-            transform: rotate(0deg);
-            animation-name: secondPattyUp;
-            animation-duration: 0.8s;
-        }
-        .navStack span:nth-child(3){
-            top: 21px;
-            transform: rotate(0deg);
-            animation-name: thirdPattyUp;
-            animation-duration: 0.8s;
-
-        }
-        .navStack span.active:nth-child(1){
-            animation-name: firstPattyDown;
-            animation-duration: 0.8s;
-            top:13px;
             transform: rotate(45deg);
         }
-        .navStack span.active:nth-child(2){
-            animation-name: secondPattyDown;
-            animation-duration: 0.8s;
-            top:13px;
+    }
+    @keyframes secondPattyDown {
+        0% {
+            top: 13px;
+            transform: rotate(0deg);
+        }
+        50% {
+            top: 26px;
+            transform: rotate(0deg);
+        }
+        100% {
+            top: 13px;
             transform: rotate(-45deg);
         }
-        .navStack span.active:nth-child(3){
-            animation-name: thirdPattyDown;
-            animation-duration: 0.8s;
-            top:13px;
+    }
+    @keyframes thirdPattyDown {
+        0% {
+            top: 21px;
+            transform: rotate(0deg);
+        }
+        50% {
+            top: 26px;
+            transform: rotate(0deg);
+        }
+        100% {
+            top: 13px;
             transform: rotate(-45deg);
         }
-
-        .navbar ul.navbar-ul{
-            display: block;
-            height: 0;
-            width: 100%;
-            position: fixed;
-            top: -50px;
-            padding: 0;
-            transition: 0.5s height,0.3s padding, 0.3s top;
+    }
+    @keyframes firstPattyUp {
+        0% {
+            top: 13px;
+            transform: rotate(45deg);
         }
-        .navbar ul.navbar-ul li a{
-            height: 40px;
-            padding: 0;
-            text-indent: 15px;
-            position: relative;
-            font-size: 20px;
-            text-align: center;
-            border-bottom: #66CDAA 1px solid;
-            line-height: 45px;
-            transition: 0.3s border, 0.3s color;
+        50% {
+            top: 26px;
+            transform: rotate(0deg);
         }
-        .navbar ul.navbar-ul li{
-            display: inline-block;
-            width: 100%;
-            height: 0;
-            padding: 0;
-            transition: 0.5s height;
-            border: #222 1px solid;
-        }
-        .navbar ul.navbar-ul.active{
-            height: 100%;
-            padding: 45px 0 0 0;
-            top: 0;
-            transition: 0.5s height,0.3s padding, 0.3s top;
-        }
-        .navbar ul.navbar-ul.active li{
-            height: 40px;
-        }
-        .navbar .navbar-ul li:hover .sub-navbar-ul li{
-            height: 40px;
-        }
-        .navbar ul.navbar-ul li a:hover{
-            border-bottom: #AAFFEE 1px solid;
-            transition: 0.3s border, 0.3s color;
-        }
-    /*SUB NAVBAR TO BE FINISHED*/
-        .navbar .navbar-ul li .sub-navbar-ul{
-            display: block;
-            left: -105%;
-            width: 100%;
-            height: calc(100% - 45px);
-            margin: 0px;
-            position: fixed;
-            top: 0;
-            z-index: 6;
-            padding: 0;
-            padding-top: 45px;
-            transition: 0.3s left;
-        }
-        .navbar .navbar-ul li .sub-navbar-ul.active{
-            left: 0;
-            transition: 0.3s left;            
-        }
-        .navbar ul.navbar-ul .sub-navbar-ul li a{
-            line-height: 37px;
-        }
-        .navbar ul.navbar-ul .sub-navbar-ul li a ._nav-bar{
-            background-color: #FFF;
-        }
-        .nav-bar{
-            display: none;
-        }
-        .title{
-            width: auto;
-            display: inline;
-            font-size: 20px;
-            position: relative;
+        100% {
             top: 5px;
-            left: 10px;
-            z-index: 5;
+            transform: rotate(0deg);
         }
+    }
+    @keyframes secondPattyUp {
+        0% {
+            top: 13px;
+            transform: rotate(-45deg);
+        }
+        50% {
+            top: 26px;
+            transform: rotate(0deg);
+        }
+        100% {
+            top: 13px;
+            transform: rotate(0deg);
+        }
+    }
+    @keyframes thirdPattyUp {
+        0% {
+            top: 13px;
+            transform: rotate(-45deg);
+        }
+        50% {
+            top: 26px;
+            transform: rotate(0deg);
+        }
+        100% {
+            top: 21px;
+            transform: rotate(0deg);
+        }
+    }
+    .navStack {
+        width: 35px;
+        height: 29px;
+        border: none;
+        background: none;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        z-index: 1;
+        display: block;
+    }
+    .navStack span {
+        border-radius: 10px;
+        height: 3px;
+        width: 29px;
+        top: 22px;
+        position: absolute;
+        margin: 0 3px;
+        background: #AAFFEE;
+        border: none;
+        left: 0px;
+    }
+    .navStack span:nth-child(1) {
+        top: 5px;
+        transform: rotate(0deg);
+        animation-name: firstPattyUp;
+        animation-duration: 0.8s;
+    }
+    .navStack span:nth-child(2) {
+        top: 13px;
+        transform: rotate(0deg);
+        animation-name: secondPattyUp;
+        animation-duration: 0.8s;
+    }
+    .navStack span:nth-child(3) {
+        top: 21px;
+        transform: rotate(0deg);
+        animation-name: thirdPattyUp;
+        animation-duration: 0.8s;
+    }
+    .navStack span.active:nth-child(1) {
+        animation-name: firstPattyDown;
+        animation-duration: 0.8s;
+        top: 13px;
+        transform: rotate(45deg);
+    }
+    .navStack span.active:nth-child(2) {
+        animation-name: secondPattyDown;
+        animation-duration: 0.8s;
+        top: 13px;
+        transform: rotate(-45deg);
+    }
+    .navStack span.active:nth-child(3) {
+        animation-name: thirdPattyDown;
+        animation-duration: 0.8s;
+        top: 13px;
+        transform: rotate(-45deg);
+    }
+    .navbar ul.navbar-ul {
+        display: block;
+        height: 0;
+        width: 100%;
+        position: fixed;
+        top: -50px;
+        padding: 0;
+        transition: 0.5s height, 0.3s padding, 0.3s top;
+    }
+    .navbar ul.navbar-ul li a {
+        height: 40px;
+        padding: 0;
+        text-indent: 15px;
+        position: relative;
+        font-size: 20px;
+        text-align: center;
+        border-bottom: #66CDAA 1px solid;
+        line-height: 45px;
+        transition: 0.3s border, 0.3s color;
+    }
+    .navbar ul.navbar-ul li {
+        display: inline-block;
+        width: 100%;
+        height: 0;
+        padding: 0;
+        transition: 0.5s height;
+        border: #222 1px solid;
+    }
+    .navbar ul.navbar-ul.active {
+        height: 100%;
+        padding: 45px 0 0 0;
+        top: 0;
+        transition: 0.5s height, 0.3s padding, 0.3s top;
+    }
+    .navbar ul.navbar-ul.active li {
+        height: 40px;
+    }
+    .navbar .navbar-ul li:hover .sub-navbar-ul li {
+        height: 40px;
+    }
+    .navbar ul.navbar-ul li a:hover {
+        border-bottom: #AAFFEE 1px solid;
+        transition: 0.3s border, 0.3s color;
+    }
+    /*SUB NAVBAR TO BE FINISHED*/
+    .navbar .navbar-ul li .sub-navbar-ul {
+        display: block;
+        left: -105%;
+        width: 100%;
+        height: calc(100% - 45px);
+        margin: 0px;
+        position: fixed;
+        top: 0;
+        z-index: 6;
+        padding: 0;
+        padding-top: 45px;
+        transition: 0.3s left;
+    }
+    .navbar .navbar-ul li .sub-navbar-ul.active {
+        left: 0;
+        transition: 0.3s left;
+    }
+    .navbar ul.navbar-ul .sub-navbar-ul li a {
+        line-height: 37px;
+    }
+    .navbar ul.navbar-ul .sub-navbar-ul li a ._nav-bar {
+        background-color: #FFF;
+    }
+    .nav-bar {
+        display: none;
+    }
+    .title {
+        width: auto;
+        display: inline;
+        font-size: 20px;
+        position: relative;
+        top: 5px;
+        left: 10px;
+        z-index: 5;
+    }
 }
 
 @media screen and (max-width: 560px) {
-
     /***********************************PHONE***********************************/
-
-        .preload * {
-            -webkit-transition: none !important;
-            -moz-transition: none !important;
-            -ms-transition: none !important;
-            -o-transition: none !important;
-            -webkit-animation: none !important;
-            -moz-animation: none !important;
-            -ms-animation: none !important;
-            -o-animation: none !important;
-        }
-
+    .preload * {
+        -webkit-transition: none !important;
+        -moz-transition: none !important;
+        -ms-transition: none !important;
+        -o-transition: none !important;
+        -webkit-animation: none !important;
+        -moz-animation: none !important;
+        -ms-animation: none !important;
+        -o-animation: none !important;
+    }
     /***********************************HIDDEN***********************************/
-
-        .navbar ul.navbar-ul .sub-navbar-ul li a ._nav-bar,
-        .topLogo{
-            display: none;
-        }
-
-        .body-content{
-            width: 80%;
-            max-width: 450px;
-        }
-
+    .navbar ul.navbar-ul .sub-navbar-ul li a ._nav-bar,
+    .topLogo {
+        display: none;
+    }
+    .body-content {
+        width: 80%;
+        max-width: 450px;
+    }
     /***********************************NAV_STACK***********************************/
-
-        @keyframes firstPattyDown{
-            0%      {   top:5px;  transform:rotate(0deg); }
-            50%     {   top:26px; transform:rotate(0deg); }
-            100%    {   top:13px; transform:rotate(45deg); }
-        }
-        @keyframes secondPattyDown{
-            0%      {   top:13px;  transform:rotate(0deg); }
-            50%     {   top:26px; transform:rotate(0deg); }
-            100%    {   top:13px; transform:rotate(-45deg); }
-        }
-        @keyframes thirdPattyDown{
-            0%      {   top:21px;  transform:rotate(0deg); }
-            50%     {   top:26px; transform:rotate(0deg); }
-            100%    {   top:13px; transform:rotate(-45deg); }
-        }
-        @keyframes firstPattyUp{
-            0%      {   top:13px; transform:rotate(45deg); }
-            50%     {   top:26px; transform:rotate(0deg); }
-            100%    {   top:5px;  transform:rotate(0deg); }
-        }
-        @keyframes secondPattyUp{
-            0%      {   top:13px; transform:rotate(-45deg); }
-            50%     {   top:26px; transform:rotate(0deg); }
-            100%    {   top:13px;  transform:rotate(0deg); }
-        }
-        @keyframes thirdPattyUp{
-            0%      {   top:13px; transform:rotate(-45deg); }
-            50%     {   top:26px; transform:rotate(0deg); }
-            100%    {   top:21px;  transform:rotate(0deg); }
-        }
-        .navStack{
-            width: 35px;
-            height: 29px;
-            border: none;
-            background: none;
-            position: absolute;
-            top: 5px;
-            right: 5px;
-            z-index: 1;
-            display: block;
-        }
-        .navStack span {
-            border-radius: 10px;
-            height: 3px;
-            width: 29px;
-            top: 22px;
-            position: absolute;
-            margin: 0 3px;
-            background: #AAFFEE;
-            border: none;
-            left: 0px;
-        }
-
-        .navStack span:nth-child(1){
+    @keyframes firstPattyDown {
+        0% {
             top: 5px;
             transform: rotate(0deg);
-            animation-name: firstPattyUp;
-            animation-duration: 0.8s;
         }
-        .navStack span:nth-child(2){
+        50% {
+            top: 26px;
+            transform: rotate(0deg);
+        }
+        100% {
             top: 13px;
-            transform: rotate(0deg);
-            animation-name: secondPattyUp;
-            animation-duration: 0.8s;
-        }
-        .navStack span:nth-child(3){
-            top: 21px;
-            transform: rotate(0deg);
-            animation-name: thirdPattyUp;
-            animation-duration: 0.8s;
-
-        }
-        .navStack span.active:nth-child(1){
-            animation-name: firstPattyDown;
-            animation-duration: 0.8s;
-            top:13px;
             transform: rotate(45deg);
         }
-        .navStack span.active:nth-child(2){
-            animation-name: secondPattyDown;
-            animation-duration: 0.8s;
-            top:13px;
+    }
+    @keyframes secondPattyDown {
+        0% {
+            top: 13px;
+            transform: rotate(0deg);
+        }
+        50% {
+            top: 26px;
+            transform: rotate(0deg);
+        }
+        100% {
+            top: 13px;
             transform: rotate(-45deg);
         }
-        .navStack span.active:nth-child(3){
-            animation-name: thirdPattyDown;
-            animation-duration: 0.8s;
-            top:13px;
+    }
+    @keyframes thirdPattyDown {
+        0% {
+            top: 21px;
+            transform: rotate(0deg);
+        }
+        50% {
+            top: 26px;
+            transform: rotate(0deg);
+        }
+        100% {
+            top: 13px;
             transform: rotate(-45deg);
         }
-
-        nav .navbar ul.navbar-ul{
-            display: block;
-            height: 0;
-            width: 100%;
-            position: fixed;
-            top: -50px;
-            padding: 0;
-            transition: 0.5s height,0.3s padding, 0.3s top;
+    }
+    @keyframes firstPattyUp {
+        0% {
+            top: 13px;
+            transform: rotate(45deg);
         }
-        nav .navbar ul.navbar-ul li a{
-            height: 40px;
-            padding: 0;
-            text-indent: 15px;
-            position: relative;
-            font-size: 20px;
-            text-align: center;
-            border-bottom: #66CDAA 1px solid;
-            line-height: 45px;
-            transition: 0.3s border, 0.3s color;
+        50% {
+            top: 26px;
+            transform: rotate(0deg);
         }
-        nav .navbar ul.navbar-ul li{
-            display: inline-block;
-            width: 100%;
-            height: 0;
-            padding: 0;
-            transition: 0.5s height;
-            border: #222 1px solid;
-        }
-        nav .navbar ul.navbar-ul.active{
-            height: 100%;
-            padding: 45px 0 0 0;
-            top: 0;
-            transition: 0.5s height,0.3s padding, 0.3s top;
-        }
-        nav .navbar ul.navbar-ul.active li{
-            height: 40px;
-        }
-        nav .navbar ul.navbar-ul li a:hover{
-            border-bottom: #AAFFEE 1px solid;
-            transition: 0.3s border, 0.3s color;
-        }
-
-        .navbar ul.navbar-ul .sub-navbar-ul li a{
-            line-height: 45px;
-        }
-        .nav-bar{
-            display: none;
-        }
-        .title{
-            width: auto;
-            display: inline;
-            font-size: 20px;
-            position: relative;
+        100% {
             top: 5px;
-            left: 10px;
-            z-index: 5;
+            transform: rotate(0deg);
         }
-
-
+    }
+    @keyframes secondPattyUp {
+        0% {
+            top: 13px;
+            transform: rotate(-45deg);
+        }
+        50% {
+            top: 26px;
+            transform: rotate(0deg);
+        }
+        100% {
+            top: 13px;
+            transform: rotate(0deg);
+        }
+    }
+    @keyframes thirdPattyUp {
+        0% {
+            top: 13px;
+            transform: rotate(-45deg);
+        }
+        50% {
+            top: 26px;
+            transform: rotate(0deg);
+        }
+        100% {
+            top: 21px;
+            transform: rotate(0deg);
+        }
+    }
+    .navStack {
+        width: 35px;
+        height: 29px;
+        border: none;
+        background: none;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        z-index: 1;
+        display: block;
+    }
+    .navStack span {
+        border-radius: 10px;
+        height: 3px;
+        width: 29px;
+        top: 22px;
+        position: absolute;
+        margin: 0 3px;
+        background: #AAFFEE;
+        border: none;
+        left: 0px;
+    }
+    .navStack span:nth-child(1) {
+        top: 5px;
+        transform: rotate(0deg);
+        animation-name: firstPattyUp;
+        animation-duration: 0.8s;
+    }
+    .navStack span:nth-child(2) {
+        top: 13px;
+        transform: rotate(0deg);
+        animation-name: secondPattyUp;
+        animation-duration: 0.8s;
+    }
+    .navStack span:nth-child(3) {
+        top: 21px;
+        transform: rotate(0deg);
+        animation-name: thirdPattyUp;
+        animation-duration: 0.8s;
+    }
+    .navStack span.active:nth-child(1) {
+        animation-name: firstPattyDown;
+        animation-duration: 0.8s;
+        top: 13px;
+        transform: rotate(45deg);
+    }
+    .navStack span.active:nth-child(2) {
+        animation-name: secondPattyDown;
+        animation-duration: 0.8s;
+        top: 13px;
+        transform: rotate(-45deg);
+    }
+    .navStack span.active:nth-child(3) {
+        animation-name: thirdPattyDown;
+        animation-duration: 0.8s;
+        top: 13px;
+        transform: rotate(-45deg);
+    }
+    nav .navbar ul.navbar-ul {
+        display: block;
+        height: 0;
+        width: 100%;
+        position: fixed;
+        top: -50px;
+        padding: 0;
+        transition: 0.5s height, 0.3s padding, 0.3s top;
+    }
+    nav .navbar ul.navbar-ul li a {
+        height: 40px;
+        padding: 0;
+        text-indent: 15px;
+        position: relative;
+        font-size: 20px;
+        text-align: center;
+        border-bottom: #66CDAA 1px solid;
+        line-height: 45px;
+        transition: 0.3s border, 0.3s color;
+    }
+    nav .navbar ul.navbar-ul li {
+        display: inline-block;
+        width: 100%;
+        height: 0;
+        padding: 0;
+        transition: 0.5s height;
+        border: #222 1px solid;
+    }
+    nav .navbar ul.navbar-ul.active {
+        height: 100%;
+        padding: 45px 0 0 0;
+        top: 0;
+        transition: 0.5s height, 0.3s padding, 0.3s top;
+    }
+    nav .navbar ul.navbar-ul.active li {
+        height: 40px;
+    }
+    nav .navbar ul.navbar-ul li a:hover {
+        border-bottom: #AAFFEE 1px solid;
+        transition: 0.3s border, 0.3s color;
+    }
+    .navbar ul.navbar-ul .sub-navbar-ul li a {
+        line-height: 45px;
+    }
+    .nav-bar {
+        display: none;
+    }
+    .title {
+        width: auto;
+        display: inline;
+        font-size: 20px;
+        position: relative;
+        top: 5px;
+        left: 10px;
+        z-index: 5;
+    }
     /***********************************PRODUCTS PAGES***********************************/
-
-        #ProductsHome .col{
-            background: none;
-            display: inline-flex;
-            flex-direction: column;
-            width: 95%;
-        }
-
-        #ProductsHome .datapack{
-            background: #222;
-        }
-
+    #ProductsHome .col {
+        background: none;
+        display: inline-flex;
+        flex-direction: column;
+        width: 95%;
+    }
+    #ProductsHome .datapack {
+        background: #222;
+    }
 }
