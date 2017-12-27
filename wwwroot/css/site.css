@@ -463,12 +463,17 @@ nav a:hover {
 }
 
 #anIconsHome h1 {
+    margin: 10px 0;
     text-align: center;
     border-bottom: solid 1px #FFF;
 }
 
 #anIconsHome h2 {
     padding-top: 5px;
+}
+
+#anIconsHome h5 {
+    letter-spacing: 1px;
 }
 
 .iconPack {
