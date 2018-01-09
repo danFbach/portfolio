@@ -304,6 +304,10 @@ h2.subh2.hl .hb2 {
     background-color: #66CDAA;
 }
 
+h5 {
+    margin: 5px 0 5px 0;
+}
+
 body ul {
     display: block;
 }
@@ -393,6 +397,7 @@ a:active {
     color: #66CDAA;
     text-decoration: none;
     border: none;
+    overflow-wrap: break-word;
 }
 
 a:hover {
@@ -2294,7 +2299,7 @@ nav a:hover {
         margin: 0px;
         position: fixed;
         top: 0;
-        z-index: 6;
+        z-index: 1;
         padding: 0;
         padding-top: 45px;
         transition: 0.3s left;
@@ -2437,7 +2442,7 @@ nav a:hover {
         position: absolute;
         top: 5px;
         right: 5px;
-        z-index: 1;
+        z-index: 5;
         display: block;
     }
     .navStack span {
@@ -2542,6 +2547,12 @@ nav a:hover {
         top: 5px;
         left: 10px;
         z-index: 5;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    h5 {
+        font-size: 12px;
     }
     /***********************************PRODUCTS PAGES***********************************/
     #ProductsHome .col {

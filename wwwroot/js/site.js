@@ -1,4 +1,3 @@
-// Write your JavaScript code.
 $(document).ready(function($) {
     var windowHeight = $(window).height();
     var _offset = windowHeight * 0.66;
@@ -10,12 +9,19 @@ $(document).ready(function($) {
     $(document).on('scroll', function() {
         eachRow(_offset);
     });
+    $("a.subnavLink").click(function() {
+        $(this).next().addClass('active');
+        $('.navStack').addClass('subnavActive');
+    });
     $('#contactTrigger').click(function() {
         $('.sub-navbar-ul').toggleClass('active');
         $('.navStack').toggleClass('contactSub');
     });
     $('.navStack').click(function() {
-        if ($(this).hasClass('contactSub')) {
+        if ($(this).hasClass('subnavActive')) {
+            $(this).removeClass('subnavActive');
+            $('.sub-navbar-ul').removeClass('active');
+        } else if ($(this).hasClass('contactSub')) {
             $('.sub-navbar-ul').toggleClass('active');
             $('.navStack').toggleClass('contactSub');
         } else {
