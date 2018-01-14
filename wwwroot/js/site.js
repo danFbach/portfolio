@@ -1,6 +1,13 @@
 $(document).ready(function($) {
     var windowHeight = $(window).height();
     var _offset = windowHeight * 0.66;
+    var hlTop = 0;
+    // var subOffsets = $('.subh2').each(function() {
+    //     $(this).offset().top;
+    // });
+    // subOffsets.each(function() {
+    //     console.log(this.offsetTop);
+    // });
     $(window).resize(function() {
         windowHeight = $(window).height();
         _offset = windowHeight * 0.66;
@@ -8,6 +15,10 @@ $(document).ready(function($) {
     eachRow(_offset);
     $(document).on('scroll', function() {
         eachRow(_offset);
+        hlTop = $('.hl').offset().top;
+        var curScrollY = scrollY + 40;
+        stickyH2(hlTop, curScrollY)
+
     });
     $("a.subnavLink").click(function() {
         $(this).next().addClass('active');
@@ -31,15 +42,22 @@ $(document).ready(function($) {
         }
     });
     $('h2.subh2').click(function() {
+        var curScrollY = scrollY + 40;
         if ($(this).hasClass('hl')) {
             $('.slider').slideUp();
             $('h2.subh2').removeClass('hl');
+            $('h2.subh2').removeClass('sticky');
+            stickyH2(hlTop, curScrollY);
         } else {
+            $('h2.subh2').removeClass('sticky');
             $('.slider').slideUp();
             $('h2.subh2').removeClass('hl');
             $(this).toggleClass('hl');
-            $(this).next().slideToggle(250);
-            slideTo(this);
+            $(this).next().slideToggle(250, function() {
+                hlTop = $(this).offset().top;
+                stickyH2(hlTop, curScrollY);
+            });
+            slideTo($(this).next());
         }
     });
     $('.anicon').click(function() {
@@ -70,6 +88,14 @@ $(document).ready(function($) {
     // 		});
     // 	}
     // }
+    function stickyH2(h2Top, curScrollY) {
+        if (h2Top <= curScrollY) {
+            $('.hl').addClass('sticky');
+        } else if (h2Top > curScrollY) {
+            $('.hl').removeClass('sticky');
+        }
+    }
+
     function setOffset() {
         var windowHeight = $(window).height();
         return windowHeight * 0.66;
@@ -80,7 +106,7 @@ $(document).ready(function($) {
     }
 
     function slideTo(element) {
-        setTimeout(function() { $('html, body').animate({ scrollTop: ($(element).offset().top - 50) }, 200); }, 400);
+        setTimeout(function() { $('html, body').animate({ scrollTop: ($(element).offset().top - 80) }, 200); }, 400);
     }
 
     function eachRow(_offset) {

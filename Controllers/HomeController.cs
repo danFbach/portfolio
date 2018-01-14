@@ -14,7 +14,7 @@ namespace test.Controllers
         {
 
             @ViewData["Page Name"] = "HOME";
-            @ViewData["Title"] = "Test Home";
+            @ViewData["Title"] = "Home";
             return View();
         }
 
